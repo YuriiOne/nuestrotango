@@ -1,0 +1,18 @@
+/*********     start global styles        *********/
+.hide{
+	display: none;
+}
+/*********     end global styles        *********/
+/*********     START TEMP styles *********/
+body{background: grey}
+/*********    end TEMP styles    *********/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    transition: background .3s, box-shadow .3s;
+    z-index: 3;
+}
