@@ -1,18 +1,51 @@
-/*********     start global styles        *********/
-.hide{
-	display: none;
+@font-face {
+    font-family: CenturyGothic-Bold;
+    src: url(../fonts/gothic.ttf);
 }
+/*********     start global styles        *********/
+.hidden {
+  display: none; }
 /*********     end global styles        *********/
 /*********     START TEMP styles *********/
-body{background: grey}
+body {
+  font-family: "CenturyGothic-Bold", sans-serif;
+  color: #333;
+  font-weight: normal;
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: #add8e6;
+} /*temp*/
+
 /*********    end TEMP styles    *********/
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-    box-shadow: none;
-    transition: background .3s, box-shadow .3s;
-    z-index: 3;
+/*nav menu потом стилизируем под https://mdbootstrap.com/previews/templates/landing-page/html/Landing-Page-Medical.html#*/
+.navbar:not(.top-nav-collapse) {
+    background: 0 0;
+    background: #E3535A;
 }
+@media (min-width: 600px){
+.navbar.scrolling-navbar.top-nav-collapse {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+}
+/* \nav menu */
+/*header*/
+.btn {
+	background: #fff; /*temp*/ 
+	}  
+header{
+	height: 726px; /*temp*/
+}
+.section-main-header,
+.mask{
+	height: 100%; /*temp*/
+}
+.section-main-header{
+	background-image: url(../img/main_page_1slide.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* \header*/

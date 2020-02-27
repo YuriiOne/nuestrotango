@@ -1,58 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Nuestro tango school</title>
-	<meta name="description" content="Перша і єдина школа аргентинського танго в Ірпені">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel='stylesheet' id='style-css'  href="css/style.css" />
-	<link rel='stylesheet' id='mystyle-css'  href="css/" />
-
-</head>
-<body>
-	<header class="header">
-		<div class="header__row">
-			<div class="header__col-logo">
-				<img src="img/logo.png" alt="logo">
-			</div>
-			<ul class="hide language-chooser"></ul><!--display:none-->
-			<div class="header__col-phone">
-				<a href="tel:+380503358122">050 335 81 22</a>
-			</div>
-			<div class="header__col-nav">
-				<ul class="header-nav__content">
-					<li class="header-nav__item">
-						<a href="#">про нас</a>
-					</li>
-					<li class="header-nav__item">
-						<a href="#">навчання</a>
-					</li>
-					<li class="header-nav__item">
-						<a href="#">події</a> 
-					</li>
-					<li class="header-nav__item">
-						<a href="#">faq</a> 
-					</li>
-					<li class="header-nav__item">
-						<a href="#">галерея</a> 
-					</li>
-					<li class="header-nav__item">
-						<a href="#">блог</a> 
-					</li>
-				</ul>
-			</div>
-			<div class="hide header__col-burger-controller"></div><!--display:none-->
-		</div>
-	</header>
-
-
-
-
-	<script  src="js/script.js"></script>
-
-
-
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Nuestro tango school</title>
+		<meta name="description" content="Перша і єдина школа аргентинського танго в Ірпені">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel='stylesheet' href="css/style.css" />
+	</head>
+	<body>
+		<!--Navigation & Intro-->
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+				<div class="container">
+					<a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<!--Links-->
+						<ul class="navbar-nav mr-auto smooth-scroll">
+							<li class="nav-item">
+								<a class="nav-link" href="tel:+380503358122" data-offset="80">050 335 81 22</a>
+							</li>
+						</ul>
+						<!--Social Icons-->
+						<ul class="navbar-nav nav-flex-icons">
+							<li class="nav-item">
+								<a class="nav-link" href="#" data-offset="80">навчання</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">події</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">faq</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">галерея</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">блог</a>
+							</li>
+						</ul>
+						<!--nav menu https://mdbootstrap.com/previews/templates/landing-page/html/Landing-Page-Medical.html -->
+					</div>
+				</div>
+			</nav>
+			<!--/Navigation & Intro-->
+			<!--header section-->
+			<section id="home" class="section-main-header">
+				<div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+					<div class="container">
+						<div class="row wow fadeIn">
+							<!--Grid column-->
+							<div class="col-md-6 mb-4 white-text text-center text-md-left">
+								<h1 class="display-4 font-weight-bold">Танцюй танго поруч з домом<h1>
+								<p class="mb-4 d-none d-md-block">
+									<strong>Ми любимо танго і об’єдналися для того, щоб зробити його доступним в Ірпені</strong>
+								</p>
+								<btn target="_blank" href="#" class="btn btn-indigo btn-lg">Зареєструватися
+									<i class="fa fa-plus"></i>
+								</btn>
+							</div>
+						</div>
+					</div>
+					<!-- Content -->
+				</div>
+			</section>
+		</header>
+		<script  src="js/jquery-3.4.1.min.js"></script>
+		<script  src="js/bootstrap.min.js"></script>
+		<script  src="js/script.js"></script>
+	</body>
 </html>
