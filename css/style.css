@@ -1,51 +1,204 @@
 @font-face {
-    font-family: CenturyGothic-Bold;
-    src: url(../fonts/gothic.ttf);
+	font-family: CenturyGothic-Bold;
+	src: url(../fonts/gothic.ttf);
 }
+
 /*********     start global styles        *********/
 .hidden {
-  display: none; }
-/*********     end global styles        *********/
+	display: none;
+}
+
+section {
+	padding: 100px 0;
+}
+
+h1.h1 {
+	font-size: 80px;
+	font-weight: bold;
+	text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+	color: #FFFFFF;
+}
+
+h2, h1 {
+	font-size: 60px;
+	font-weight: bold;
+	text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+	color: #FFFFFF;
+}
+
+h3 {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 30px;
+	font-weight: bold;
+}
+h5{
+	font-size: 24px;
+	font-weight: bold;
+}
+@media(max-width: 767px){
+	h1.h1, h2,h1,.h1,.h2{font-size: 20px;}
+}
 /*********     START TEMP styles *********/
+
+/*********     end global styles        *********/
+.img-icons-wrapper img{
+	border-radius: 50%;
+}
+/*for icons border radius 50%*/
+
 body {
-  font-family: "CenturyGothic-Bold", sans-serif;
-  color: #333;
-  font-weight: normal;
-  font-size: 16px;
-  min-width: 320px;
-  position: relative;
-  line-height: 1.6;
-  overflow-x: hidden;
-  background: #add8e6;
-} /*temp*/
+	font-family: "CenturyGothic-Bold", sans-serif;
+	color: #333;
+	font-weight: normal;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.6;
+	overflow-x: hidden;
+	background: #add8e6;
+}
+
+/*temp*/
 
 /*********    end TEMP styles    *********/
+
 /*nav menu потом стилизируем под https://mdbootstrap.com/previews/templates/landing-page/html/Landing-Page-Medical.html#*/
 .navbar:not(.top-nav-collapse) {
-    background: 0 0;
-    background: #E3535A;
+	background: 0 0;
 }
-@media (min-width: 600px){
-.navbar.scrolling-navbar.top-nav-collapse {
-    padding-top: 5px;
-    padding-bottom: 5px;
+
+@media (min-width:600px) {
+	.navbar.scrolling-navbar.top-nav-collapse {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background: #E3535A;
+	}
+
 }
-}
-/* \nav menu */
+
+/* 
+av menu */
+
 /*header*/
-.btn {
-	background: #fff; /*temp*/ 
-	}  
-header{
+button {
+	background: #fff; /*temp*/
+}
+
+header {
 	height: 726px; /*temp*/
 }
-.section-main-header,
-.mask{
+
+.section-main-header, .mask {
 	height: 100%; /*temp*/
 }
-.section-main-header{
+
+.section-main-header {
 	background-image: url(../img/main_page_1slide.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
+
 /* \header*/
+
+/*======== Start section-main-price =====*/
+.section-main-price {
+	background: linear-gradient(90.52deg, rgba(255, 46, 0, 0.5) 0.12%, rgba(255, 214, 0, 0.2) 50.52%, rgba(24, 172, 255, 0.2) 99.87%);
+}
+
+/*======== End section-main-price ====*/
+/*======== Start section-main-gallery ====*/
+.section-main-gallery .main-gallery__item{
+	margin-bottom: 30px;
+}
+        
+img.zoom {
+    width: 100%;
+    height: 200px;
+    border-radius:5px;
+    object-fit:cover;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}       
+
+.transition {
+    -webkit-transform: scale(1.15); 
+    -moz-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
+}
+/*======== End section-main-gallery ====*/
+/*======== Start footer ====*/
+footer .bg-white{
+	border: 2px solid red;
+	max-width: 355px;
+}
+/*footer .bg-dark{
+	border: 2px solid green;
+	max-width: 450px;
+	margin-left: -35px;
+}
+footer{
+	background: url(../img/footer_bg.png) 100% 100% no-repeat;
+background-size: cover;
+height: 50vh;
+}*/
+/*======== End footer ====*/
+#map{
+	position: absolute;
+	width: 100%;
+	height: 400px;
+}
+
+/* Start 6 gallery-page*/
+#gallery-page header,
+#about-page header,
+#study-page header,
+#blog-page header,
+#events-page header,
+#faq-page header{ /*temp ?*/
+	height: 360px;
+	background: url(../img/gallery/gallery-header-bg.png);
+}
+.header-title{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding-top: 60px;
+	position: relative;
+}
+.img-icons-wrapper{
+position: absolute;
+    bottom: -25px;
+    left: 0;
+    z-index: 3;
+    }
+/** start faq*/
+.question-answer-group .question-text{
+	width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.question-answer-group .question-text[aria-expanded=true] .fa-plus,
+.question-answer-group .question-text[aria-expanded=false] .fa-minus
+{
+	display: none;
+}
+.question-answer-group .fa{
+	color: #E44A51;
+}
+.question-answer-group .question-title{
+	background: #F5F1F1;
+border-radius: 2px;
+}
+
+/** END faq*/
