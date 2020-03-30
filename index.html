@@ -6,24 +6,24 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Nuestro tango school</title>
 		<meta name="description" content="Перша і єдина школа аргентинського танго в Ірпені">
-		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel='stylesheet' href="css/style.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 	</head>
-	<body>
-		<header>
+	<body id="main-page">
+		<header class="position-relative">
 			<!--================ Navigation & Intro =================-->
 			<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
 				<div class="container">
-					<a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>
+					<a class="navbar-brand" href="#" disabled><img src="img/logo.png" alt="logo"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
 						<!--Links-->
-						<ul class="navbar-nav mr-auto smooth-scroll">
+						<ul class="navbar-nav smooth-scroll">
 							<li class="nav-item">
 								<a class="nav-link" href="tel:+380503358122" data-offset="80">050 335 81 22</a>
 							</li>
@@ -48,6 +48,17 @@
 							<li class="nav-item">
 								<a class="nav-link text-dark" href="blog-page.html">блог</a>
 							</li>
+							<!--temp menu -->
+							<li class="nav-item">
+								<a class="nav-link text-dark" href="basic.html">basic</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-dark" href="intermediate.html">Intermediate</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-dark" href="private.html">private</a>
+							</li>
+							<!--/temp menu -->
 						</ul>
 						<!--nav menu https://mdbootstrap.com/previews/templates/landing-page/html/Landing-Page-Medical.html -->
 					</div>
@@ -55,23 +66,22 @@
 			</nav>
 			<!--================ End Navigation & Intro =================-->
 			<!--================ Start section-main-header =================-->
-			<section id="home" class="section-main-header">
-				<div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-					<div class="container">
-						<div class="row wow fadeIn">
-							<div class="col-md-6 mb-4 white-text text-center text-md-left">
-								<h1 class="display-4 font-weight-bold h1">Танцюй танго поруч з домом</h1>
-								<p class="mb-4 d-none d-md-block">
-									<strong>Ми любимо танго і об’єдналися для того, щоб зробити його доступним в Ірпені</strong>
-								</p>
-								<button target="_blank" href="#" class="btn btn-indigo btn-lg">Зареєструватися
-								<i class="fa fa-plus"></i>
+			<section id="home" class="section-main-header pre-header">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-lg-8 block__main-header">
+							<h1 class="main-header__title page-title">Танцюй танго поруч з домом</h1>
+							<p class="main-header__text">Ми любимо танго і об’єдналися для того, щоб зробити його доступним <strong>в Ірпені</strong>
+							</p>
+							<div class="events__registration">
+								<button target="_blank" href="#" class="btn btn-indigo btn-lg  registration-button">Зареєструватися <i class="fa fa-plus"></i>
 								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+			<div class="mask-salmon"></div>
 			<!--================ End section-main-header =================-->
 		</header>
 		<main>
@@ -79,19 +89,15 @@
 			<section id="section-main-greeting" class="section-main-greeting bg-white">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-5 mb-4">
-							<h2 style=" position: relative;    font-weight: bold;    white-space: nowrap;    z-index: 44444; color: #E3535A">Nuestro tango school</h2>
+						<div class="col-lg-5">
+							<h2 class="vine-color">Nuestro tango school</h2>
+							<img src="img/greeting_mob.jpg" class="card-img-top  d-lg-none" alt="">
 							<p>Перша і єдина школа аргентинського танго в Ірпені. Ми любимо танго і об’єдналися для того, щоб зробити його доступним в нашому місті.</p>
 							<p>Зараз танго переживає другу “золоту добу” - в більшості великих і в багатьох невеликих містах світу звичними є танго-школи та вечірки танго - мілонги.  Ось і Ірпінь не став винятком.</p>
 							<a href="#" class="btn btn-more-info">Більше інформації</a>
 							<i class="fa fa-arrow-right"></i>
 						</div>
-						<div class="col-md-7 mb-4">
-							<div class="view overlay z-depth-1-half">
-								<img src="img/greeting-section.png" class="card-img-top" alt="">
-								<div class="mask rgba-white-light"></div>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</section>
@@ -103,139 +109,164 @@
 					<div class="block-main-price">
 						<h3>Навчання</h3>
 						<div class="row">
+							<!--*************/Pricing card 1**************-->
 							<div class="col-lg-4 col-md-12 basic-course">
-								<!--Pricing card 1-->
 								<div class="card pricing-card__info">
-									<p class="card-info__price">Курс</p>
-									<h4 class="card-info__name-course">Basic</h4>
-									<p class="standart-normal">Вартість</p>
-									<h4 class="card-info__price">900 грн / 1 місяць</h4>
-									<p class="card-info__description">Курс для тебе, якщо ти: <span class="standart-small">Початківець, або ж хочеш освіжити ази, або ж бажаєш опанувати “іншу роль”.</span></p>
+									<div class="basic-course__item course__item">
+										<div class="basic-course__title group-title">Курс</div>
+										<h4 class="basic-course__text course__text-bold">Basic</h4>
+									</div>
+									<div class="basic-course__item course__item">
+										<div class="basic-course__title group-title">Вартість</div>
+										<div class="basic-course__text course__text-bold">900 <span>грн</span> / 1 <span>місяць</span></div>
+									</div>
+									<div class="basic-course__item course__item">
+										<div class="basic-course__title group-title">Курс для тебе, якщо ти: </div>
+										<div class="basic-course__text course__text">Початківець, або ж хочеш освіжити ази, або ж бажаєш опанувати “іншу роль”.</div>
+									</div>
 								</div>
 								<div class="card pricing-card__more text-center">
 									<button target="_blank" href="#" class="btn btn-indigo btn-lg">Зареєструватися
 									<i class="fa fa-plus"></i>
 									<a href="#" class="btn btn-indigo"><i class="fa fa-info-circle"></i>Дізнатись детальніше про курс</a>
 								</div>
-								<!--\Pricing card 1-->
 							</div>
+							<!--*************/Pricing card 1**************-->
+							<!--******************************************-->
+							<!--******************************************-->
+							<!--**************Pricing card 2**************-->
 							<div class="col-lg-4 col-md-12 intermediate-course">
-								<!--Pricing card 2-->
 								<div class="card pricing-card__info">
-									<p class="card-info__price">Курс</p>
-									<h4 class="card-info__name-course">Intermediate</h4>
-									<p class="standart-normal">Вартість</p>
-									<h4 class="card-info__price">900 грн / 1 місяць</h4>
-									<p class="card-info__description">Курс для тебе, якщо ти: <span class="standart-small">Початківець, або ж хочеш освіжити ази, або ж бажаєш опанувати “іншу роль”.</span></p>
+									<div class="intermediate-course__item course__item">
+										<div class="intermediate-course__title group-title">Курс</div>
+										<h4 class="basic-course__text course__text-bold">Intermediate</h4>
+									</div>
+									<div class="intermediate-course__item course__item">
+										<div class="intermediate-course__title group-title">Вартість</div>
+										<div class="intermediate-course__text course__text-bold">1 000 <span>грн</span> / 1 <span>місяць</span></div>
+									</div>
+									<div class="intermediate-course__item course__item">
+										<div class="intermediate-course__title group-title">Курс для тебе, якщо ти:</div>
+										<div class="intermediate-course__text course__text">Маєш базову підготовку з аргентинського танго та бажаєш продовжити навчання.</div>
+									</div>
 								</div>
 								<div class="card pricing-card__more text-center">
 									<button target="_blank" href="#" class="btn btn-indigo btn-lg">Зареєструватися
 									<i class="fa fa-plus"></i>
 									<a href="#" class="btn btn-indigo"><i class="fa fa-info-circle"></i>Дізнатись детальніше про курс</a>
 								</div>
-								<!--\Pricing card 2-->
 							</div>
-							<div class="col-lg-4 col-md-12 individual-course">
-								<!--Pricing card 3-->
+							<!--*************/Pricing card 2**************-->
+							<!--******************************************-->
+							<!--******************************************-->
+							<!--*************Pricing card 3***************-->
+							<div class="col-lg-4 col-md-12 private-course">
 								<div class="card pricing-card__info">
-									<p class="card-info__price">Курс</p>
-									<h4 class="card-info__name-course">Індивідуальні</h4>
-									<p class="standart-normal">Вартість</p>
-									<h4 class="card-info__price">900 грн / 1 місяць</h4>
-									<p class="card-info__description">Курс для тебе, якщо ти: <span class="standart-small">Початківець, або ж хочеш освіжити ази, або ж бажаєш опанувати “іншу роль”.</span></p>
+									<div class="private-course__item course__item">
+										<div class="private-course__title group-title">Курс</div>
+										<h4 class="private-course__text course__text-bold">Індивідуальні</h4>
+									</div>
+									<div class="private-course__item course__item">
+										<div class="private-course__title group-title">Вартість</div>
+										<div class="private-course__text course__text-bold">від 400 <span>грн</span> / 1 <span>урок</span></div>
+									</div>
+									<div class="private-course__item course__item">
+										<div class="private-course__title group-title">Курс для тебе, якщо ти:</div>
+										<div class="private-course__text course__text">Хочеш розвиватися у власному ритмі та за власним графіком, один-на-один з викладачем або в парі.</div>
+									</div>
 								</div>
 								<div class="card pricing-card__more text-center">
 									<button target="_blank" href="#" class="btn btn-indigo btn-lg">Зареєструватися
 									<i class="fa fa-plus"></i>
 									<a href="#" class="btn btn-indigo"><i class="fa fa-info-circle"></i>Дізнатись детальніше про курс</a>
 								</div>
-								<!--\Pricing card 3-->
+							</div>
+							<!--*************/Pricing card 3**************-->
+							</div><!-- row-->
+							</div><!-- block-main-price-->
+							</div><!--container -->
+						</section>
+						<!--================ End section-main-price =================-->
+						<!--================ Start  section-main-gallery=================-->
+						<section id="section-main-gallery" class="section-main-gallery bg-white">
+							<!-- Page Content -->
+							<div class="container">
+								<h3 class="text-center">Фотогалерея</h3>
+								<div class="row">
+									<div class="col-md-4 main-gallery__item">
+										<a href="img/small-gallery/gallery1.png" class="fancybox" rel="ligthbox">
+											<img  src="img/small-gallery/gallery1.png" class="zoom img-fluid "  alt="">
+										</a>
+									</div>
+									<div class="col-md-4 main-gallery__item">
+										<a href="img/small-gallery/gallery2.png"  class="fancybox" rel="ligthbox">
+											<img  src="img/small-gallery/gallery2.png" class="zoom img-fluid"  alt="">
+										</a>
+									</div>
+									<div class="col-md-4 main-gallery__item">
+										<a href="img/small-gallery/gallery3.png" class="fancybox" rel="ligthbox">
+											<img  src="img/small-gallery/gallery3.png" class="zoom img-fluid "  alt="">
+										</a>
+									</div>
+									<div class="col-md-4 main-gallery__item">
+										<a href="img/small-gallery/gallery4.png" class="fancybox" rel="ligthbox">
+											<img  src="img/small-gallery/gallery4.png" class="zoom img-fluid "  alt="">
+										</a>
+									</div>
+									<div class="col-md-4 main-gallery__item">
+										<a href="img/small-gallery/gallery5.png" class="fancybox" rel="ligthbox">
+											<img  src="img/small-gallery/gallery5.png" class="zoom img-fluid "  alt="">
+										</a>
+									</div>
+									<div class="col-md-4 main-gallery__item">
+										<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
+											<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
+										</a>
+									</div>
+								</div>
+								<div class="text-center"><a href="#" class="btn btn-more-info">Більше інформації</a>
+							<i class="fa fa-arrow-right"></i></div>
+						</div>
+					</section>
+					<!--================ End section-main-gallery =================-->
+				</main>
+				<footer class="page-footer font-small blue">
+					<h3>My Google Maps Demo</h3>
+					<!--The div element for the map -->
+					<div id="map"></div>
+					<div class="footer-copyright text-center py-3">© Nuestro tango 2020
+					</div>
+					<div class="container">
+						<div class="row justify-content-start">
+							<div class="col-sm-12 col-md-6 col-lg-5 col-xl-4 bg-white">
+								<h5>Контакты</h5>
+								<ul class="list-unstyled">
+									<li>
+										<p>
+										<i class="fa fa-phone mr-3"></i> 050 335 81 22</p>
+									</li>
+									<li>
+										<p>
+										<i class="fa fa-map-marker mr-3"></i> центральний будинок культури, вул. соборна, 183, м. ірпінь</p>
+									</li>
+									<li>
+										<p>
+										<i class="fa fa-map-marker mr-3"></i> Portal lifestyle вул. енергетиків, 2, м. Буча</p>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-12 col-md-6 col-lg-5 col-xl-4  bg-dark">
+								<h5>Напиши нам</h5>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			<!--================ End section-main-price =================-->
-			<!--================ Start  section-main-gallery=================-->
-			<section id="section-main-gallery" class="section-main-gallery bg-white">
-				<!-- Page Content -->
-				<div class="container">
-					<h3 class="text-center">Фотогалерея</h3>
-					<div class="row">
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery1.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery1.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery2.png"  class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery2.png" class="zoom img-fluid"  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery3.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery3.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery4.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery4.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery5.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery5.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-					</div>
-					<div class="text-center"><a href="#" class="btn btn-more-info">Більше інформації</a>
-				<i class="fa fa-arrow-right"></i></div>
-			</div>
-		</section>
-		<!--================ End section-main-gallery =================-->
-	</main>
-	<footer class="page-footer font-small blue">
-		<h3>My Google Maps Demo</h3>
-		<!--The div element for the map -->
-		<div id="map"></div>
-		<div class="footer-copyright text-center py-3">© Nuestro tango 2020
-		</div>
-		<div class="container">
-			<div class="row justify-content-start">
-				<div class="col-sm-12 col-md-6 col-lg-5 col-xl-4 bg-white">
-					<h5>Контакты</h5>
-					<ul class="list-unstyled">
-						<li>
-							<p>
-							<i class="fa fa-phone mr-3"></i> 050 335 81 22</p>
-						</li>
-						<li>
-							<p>
-							<i class="fa fa-map-marker mr-3"></i> центральний будинок культури, вул. соборна, 183, м. ірпінь</p>
-						</li>
-						<li>
-							<p>
-							<i class="fa fa-map-marker mr-3"></i> Portal lifestyle вул. енергетиків, 2, м. Буча</p>
-						</li>
-					</ul>
-				</div>
-				<div class="col-sm-12 col-md-6 col-lg-5 col-xl-4  bg-dark">
-					<h5>Напиши нам</h5>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<script src="js/jquery-3.4.1.min.js"></script>
-	<script  src="js/bootstrap.min.js"></script>
-	<script  src="js/script.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-	<script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtSEP9KcxvUOrup51F6Mk-ZeV1SGdYTuI&callback=initMap">
-	</script>
-</body>
-</html>
+				</footer>
+				<script src="js/jquery-3.4.1.min.js"></script>
+				<script  src="js/bootstrap.min.js"></script>
+				<script  src="js/script.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+				<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtSEP9KcxvUOrup51F6Mk-ZeV1SGdYTuI&callback=initMap">
+				</script>
+			</body>
+		</html>

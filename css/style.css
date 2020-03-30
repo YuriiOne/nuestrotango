@@ -2,54 +2,24 @@
 	font-family: CenturyGothic-Bold;
 	src: url(../fonts/gothic.ttf);
 }
-
 /*********     start global styles        *********/
-.hidden {
-	display: none;
-}
+/*start*  colors: */
+.vine-color{color: #E3545A;}
+/*end*   colors */
 
-section {
-	padding: 100px 0;
-}
-
-h1.h1 {
-	font-size: 80px;
-	font-weight: bold;
-	text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-	color: #FFFFFF;
-}
-
-h2, h1 {
-	font-size: 60px;
-	font-weight: bold;
-	text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-	color: #FFFFFF;
-}
-
-h3 {
-	font-size: 40px;
-	font-weight: bold;
-}
-
-h4 {
-	font-size: 30px;
-	font-weight: bold;
-}
-h5{
-	font-size: 24px;
-	font-weight: bold;
-}
-@media(max-width: 767px){
-	h1.h1, h2,h1,.h1,.h2{font-size: 20px;}
-}
-/*********     START TEMP styles *********/
-
+.info-title{font-size: 22px;font-weight: bold;color: #434A5B;}
+.call-button{background: #5F98DA;	box-shadow: 0px 10px 60px rgba(255, 255, 255, 0.2), 0px 10px 60px rgba(255, 255, 255, 0.2);
+  	color: #fff; 	border-radius: 60px;}
+.events__registration{padding-top: 30px;}
 /*********     end global styles        *********/
-.img-icons-wrapper img{
-	border-radius: 50%;
-}
-/*for icons border radius 50%*/
-
+/*********     START TEMP styles *********/
+section {	padding: 75px 0;}
+h3 {font-size: 40px;	font-weight: bold;} h4 {font-size: 30px;	font-weight: bold;} h5{	font-size: 24px;	font-weight: bold;}
+#main-page a.navbar-brand{	pointer-events: none;}
+.img-icons-wrapper img{ /*for icons border radius 50%*/	border-radius: 50%;}
+button {	background: #fff; /*temp*/}
+.section-main-header, .mask {	height: 100%; /*temp*/}
+/*********    end TEMP styles    *********/
 body {
 	font-family: "CenturyGothic-Bold", sans-serif;
 	color: #333;
@@ -59,48 +29,91 @@ body {
 	position: relative;
 	line-height: 1.6;
 	overflow-x: hidden;
-	background: #add8e6;
 }
-
-/*temp*/
-
-/*********    end TEMP styles    *********/
-
 /*nav menu потом стилизируем под https://mdbootstrap.com/previews/templates/landing-page/html/Landing-Page-Medical.html#*/
-.navbar:not(.top-nav-collapse) {
-	background: 0 0;
+.mask-salmon{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(227, 83, 90, 0.8);
+}
+.pre-header .page-title {/*for all h1 titles*/
+	font-size: 40px;
+	line-height: 105.11%;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+	}
+.pre-header .main-header__text{
+	font-size: 14px;
+	line-height: 17px;
+	color: rgba(255, 255, 255, 0.9);
+	padding-top: 20px;
+}
+h2{
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 34px;
+	text-align: center;
+}
+.section-main-greeting{
+	background: url(../img/greeting_with_white_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding: 0;
+    height: 720px; /*only dessctop*/
 }
 
+
+@media (min-width:992px) {
+	.mask-salmon{width: 45%;}
+	.navbar:not(.top-nav-collapse) {
+		background: 0 0;
+		padding-top: 40px;
+	}
+}
+@media (min-width:768px){
+header{
+		height: 726px;
+}
+.section-main-header {
+    display: flex;
+    align-items: center;
+}
+.pre-header .page-title {
+    font-size: 80px;
+}
+.pre-header .main-header__text {
+    font-size: 22px;
+    line-height: 27px;
+}
+}
 @media (min-width:600px) {
 	.navbar.scrolling-navbar.top-nav-collapse {
 		padding-top: 5px;
 		padding-bottom: 5px;
 		background: #E3535A;
 	}
-
 }
+/* nav menu */
 
-/* 
-av menu */
+.section-main-header .block__main-header{z-index: 2;}
 
+@media (max-width:991px) {
+	.navbar.fixed-top.scrolling-navbar {
+    background: #E3535A;
+}
+}
 /*header*/
-button {
-	background: #fff; /*temp*/
-}
 
-header {
-	height: 726px; /*temp*/
-}
-
-.section-main-header, .mask {
-	height: 100%; /*temp*/
-}
 
 .section-main-header {
-	background-image: url(../img/main_page_1slide.png);
+	background-image: url(../img/header_main_page_mobile_bg_normal.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: 83% center;
 }
 
 /* \header*/
@@ -109,7 +122,36 @@ header {
 .section-main-price {
 	background: linear-gradient(90.52deg, rgba(255, 46, 0, 0.5) 0.12%, rgba(255, 214, 0, 0.2) 50.52%, rgba(24, 172, 255, 0.2) 99.87%);
 }
+/*======== START styles for 3 mob pages=====*/
+.course__text{
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 105.11%;
+	color: #434A5B;
+}
 
+.basic-course .group-title,
+.intermediate-course .group-title,
+.private-course .group-title{
+	font-weight: bold;
+	font-size: 16px;
+	color: #E3545A;
+	text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+.intermediate-course .group-title{
+	color: #E4BD31;
+}
+.private-course .group-title{
+	color: #5F98DA;
+}
+.course__item .course__text-bold{
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 105.11%;
+}
+.course__item .course__text-bold span{
+	font-size: 20px;
+}
 /*======== End section-main-price ====*/
 /*======== Start section-main-gallery ====*/
 .section-main-gallery .main-gallery__item{
@@ -118,7 +160,6 @@ header {
         
 img.zoom {
     width: 100%;
-    height: 200px;
     border-radius:5px;
     object-fit:cover;
     -webkit-transition: all .3s ease-in-out;
@@ -139,16 +180,6 @@ footer .bg-white{
 	border: 2px solid red;
 	max-width: 355px;
 }
-/*footer .bg-dark{
-	border: 2px solid green;
-	max-width: 450px;
-	margin-left: -35px;
-}
-footer{
-	background: url(../img/footer_bg.png) 100% 100% no-repeat;
-background-size: cover;
-height: 50vh;
-}*/
 /*======== End footer ====*/
 #map{
 	position: absolute;
@@ -162,7 +193,11 @@ height: 50vh;
 #study-page header,
 #blog-page header,
 #events-page header,
-#faq-page header{ /*temp ?*/
+#faq-page header,
+#basic-page header,
+#intermediate-page header,
+#private-page header
+{ /*temp ?*/
 	height: 360px;
 	background: url(../img/gallery/gallery-header-bg.png);
 }
@@ -180,6 +215,7 @@ position: absolute;
     z-index: 3;
     }
 /** start faq*/
+#faq-page{background: #fff;} /*temp*/
 .question-answer-group .question-text{
 	width: 100%;
     text-align: left;
@@ -188,17 +224,168 @@ position: absolute;
     justify-content: space-between;
     cursor: pointer;
 }
+.question-answer-group .question-answer{
+	margin-top: 15px;
+}
 .question-answer-group .question-text[aria-expanded=true] .fa-plus,
 .question-answer-group .question-text[aria-expanded=false] .fa-minus
 {
 	display: none;
+	transition: all 0.7 ease 0s;
 }
 .question-answer-group .fa{
 	color: #E44A51;
 }
 .question-answer-group .question-title{
 	background: #F5F1F1;
-border-radius: 2px;
+	border-radius: 2px;
+	padding: 15px 25px;
+	color: #434A5B;
 }
 
 /** END faq*/
+/*START events */
+.events-body{
+	display: flex;
+	align-items: center;
+	margin-right: -15px;
+    margin-left: -15px;
+    border-top: 1px solid #DBE2EF;
+}
+/**TEMP DOWN*/
+#events-page{
+ background: #FFF;
+}
+.events__date{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.events__date-day{
+	color: #E3545A;
+	font-weight: bold;
+	font-size: 36px;
+}
+.events__date-month{
+color: #E3545A;
+font-size: 16px;
+}
+.events__date-year{
+	color: #707070;
+	font-size: 14px;
+}
+.events__information-title{
+	font-weight: bold;
+font-size: 22px;
+color: #434A5B;
+}
+.events__information-description{
+	font-weight: normal;
+font-size: 14px;
+color: #434A5B;
+}
+.registration-button{
+	color: #fff;
+	background: #E3545A;
+box-shadow: 0px 10px 60px rgba(255, 255, 255, 0.2), 0px 10px 60px rgba(255, 255, 255, 0.2);
+border-radius: 60px;
+}
+/**TEMP UP*/
+/*END events */
+/*END BloG */
+/*temp*/
+#blog-page {background: #FFF;}
+.section-blog .blog__wrap{padding: 50px 0;}
+/*END BloG */
+
+/*****Start section-about-us ******/
+#about-page{background: #fff;}
+.teacher__info{
+	font-size: 14px;
+}
+.photo-and-text{
+	display: flex;
+	align-items: center;
+	margin-right: -15px;
+    margin-left: -15px;
+
+}
+.section-teachers .teacher-block{
+	min-width: 300px;
+	text-align: center;
+}
+.block-whoWeAre .teacher-block{
+	text-align: center;
+}
+/*teacers flip card*/
+.flip-card {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+  margin: 0 auto; 
+}
+.flip-card img{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner,
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+/******END section-about-us ******/
+
+
+/******Start page Study ******/
+
+/*Start section video*/
+.section-video{
+	background: url(../img/video-mask.png);
+	height: 600px;
+}
+/******END page Study ******/
+#study-page{
+	background: #fff;
+}
+.schedule__block{
+	border: 1px solid #D4DBE7;
+	box-sizing: border-box;
+	border-radius: 2px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.price-block{
+	display: flex;
+	flex-direction: column;
+}
+
+.course__item .flip-card img,
+.course__item .flip-card {
+	width: 100px;
+	height: 100px;
+}
+.schedule__item .schedule__item-day,
+.schedule__item .schedule__item-hours,
+.schedule__item .schedule__item-course{
+	flex-basis: 33%;
+}
+.schedule__item .schedule__item-course{
+	text-align: right;
+}
+/*======== END styles for 3 mob pages=====*/
