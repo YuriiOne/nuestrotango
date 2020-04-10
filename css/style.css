@@ -13,6 +13,9 @@
 .events__registration{padding-top: 30px;}
 /*********     end global styles        *********/
 /*********     START TEMP styles *********/
+.bg-salmon{
+	background: #E3545A;
+}
 section {	padding: 75px 0;}
 h3 {font-size: 40px;	font-weight: bold;} h4 {font-size: 30px;	font-weight: bold;} h5{	font-size: 24px;	font-weight: bold;}
 #main-page a.navbar-brand{	pointer-events: none;}
@@ -123,13 +126,30 @@ header{
 	background: linear-gradient(90.52deg, rgba(255, 46, 0, 0.5) 0.12%, rgba(255, 214, 0, 0.2) 50.52%, rgba(24, 172, 255, 0.2) 99.87%);
 }
 /*======== START styles for 3 mob pages=====*/
-.course__text{
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 105.11%;
-	color: #434A5B;
+.pricing-card{
+	padding: 30px;
+	background: #fff;
+	padding-top: 24px;
 }
-
+.basic-course{
+	border-top: 10px solid #E3545A;
+}
+.intermediate-course{
+	border-top: 10px solid #E4BD31;
+}
+.private-course{
+	border-top: 10px solid #5F98DA;
+}
+.course__item {
+    margin-bottom: 35px;
+}
+.group-title {
+    margin-bottom: 15px;
+}
+.course__text {
+    font-size: 14px;
+    line-height: 105.11%;
+}
 .basic-course .group-title,
 .intermediate-course .group-title,
 .private-course .group-title{
@@ -175,17 +195,6 @@ img.zoom {
     transform: scale(1.15);
 }
 /*======== End section-main-gallery ====*/
-/*======== Start footer ====*/
-footer .bg-white{
-	border: 2px solid red;
-	max-width: 355px;
-}
-/*======== End footer ====*/
-#map{
-	position: absolute;
-	width: 100%;
-	height: 400px;
-}
 
 /* Start 6 gallery-page*/
 #gallery-page header,
@@ -389,3 +398,55 @@ border-radius: 60px;
 	text-align: right;
 }
 /*======== END styles for 3 mob pages=====*/
+/*======== Start footer ====*/
+#map{
+	position: absolute;
+	width: 100%;
+	height: 400px;
+}
+footer .bg-white{
+	border: 2px solid red;
+}
+.md-form{
+	position: relative;
+	    margin-top: 1.5rem;
+}
+.md-form input[type=text]{
+	 transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    outline: 0;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #8B93A6;
+    border-radius: 0;
+    box-sizing: content-box;
+    background-color: transparent;
+}
+.md-form input[type=text]:focus:not([readonly]){
+    border-bottom: 1px solid #E3545A;
+}
+.md-form input::placeholder{
+	color: #A4ADC4;
+}
+/*.md-form .form-control {
+    margin: 0 0 .5rem;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    padding: .6rem 0 .4rem;
+    background-image: none;
+    background-color: transparent;
+    height: auto;
+}*/
+.md-form label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+		transition: transform .2s ease-out,color .2s ease-out;
+    transition: transform .2s ease-out,color .2s ease-out,-webkit-transform .2s ease-out;
+		transform-origin: 0 100%;
+    transform: translateY(12px);
+    cursor: text;
+    color: #757575;
+}
+/*======== End footer ====*/
+
