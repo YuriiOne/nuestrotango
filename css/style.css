@@ -23,8 +23,13 @@ h3 {font-size: 40px;	font-weight: bold;} h4 {font-size: 30px;	font-weight: bold;
 button {	background: #fff; /*temp*/}
 .section-main-header, .mask {	height: 100%; /*temp*/}
 /*********    end TEMP styles    *********/
+.fz14{font-size: 14px;}
+.fz16{font-size: 16px;}
+.fz18{font-size: 18px;}
+.fz20{font-size: 20px;}
+.fz24{font-size: 24px;}
 body {
-	font-family: "CenturyGothic-Bold", sans-serif;
+	font-family: "Century Gothic", sans-serif;
 	color: #333;
 	font-weight: normal;
 	font-size: 16px;
@@ -33,6 +38,37 @@ body {
 	line-height: 1.6;
 	overflow-x: hidden;
 }
+/*for all pages */
+i.fa.fa-plus {
+    padding-left: 10px; /*for buttons plus*/
+}
+a.btn-salmon__white, /**buttons first bg after color text*/
+a.btn-white__salmon,
+a.btn-blue__white,
+a.btn-yellow__white{
+	background: #E3545A;
+    border-radius: 60px;
+    padding: 13px 27px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    display: inline-block;
+  }
+a.btn-white__salmon{
+	color: #E3545A;
+	background: #fff;
+	box-shadow: 0px 10px 60px rgba(255, 255, 255, 0.2), 0px 10px 60px rgba(255, 255, 255, 0.2);
+}
+a.btn-blue__white{
+	color: #fff;
+	background: #5F98DA;
+}
+a.btn-yellow__white{
+	color: #fff;
+	background: #E4BD31;
+}
+/* end for all pages */
 /*nav menu потом стилизируем под https://mdbootstrap.com/previews/templates/landing-page/html/Landing-Page-Medical.html#*/
 .mask-salmon{
 	position: absolute;
@@ -293,12 +329,7 @@ color: #434A5B;
 font-size: 14px;
 color: #434A5B;
 }
-.registration-button{
-	color: #fff;
-	background: #E3545A;
-box-shadow: 0px 10px 60px rgba(255, 255, 255, 0.2), 0px 10px 60px rgba(255, 255, 255, 0.2);
-border-radius: 60px;
-}
+
 /**TEMP UP*/
 /*END events */
 /*END BloG */
@@ -402,16 +433,113 @@ border-radius: 60px;
 #map{
 	position: absolute;
 	width: 100%;
-	height: 400px;
+	height: 697px;
 }
-footer .bg-white{
+.footer-wrapper{
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+.footer-wrapper .footer-left{
+	max-width: 330px;
+	border-radius: 3px;
+}
+/*footer .bg-white{
 	border: 2px solid red;
+}
+footer .contact-icons .fa{
+	color: #B63F44;
+	font-size: 24px;
+}
+*/
+footer .footer-contacts__wrapper{
+	padding: 40px;
+}
+footer .footer-left .contact-icons {
+	position: relative;
+	padding: 0 0 51px 37px;
+	line-height: 105.11%;
+}
+footer .footer-left .contact-icons:before {
+    content: '';
+    background: url(../img/icons/phone_icon.png) 0 0 no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    }
+footer .footer-left .marker-icon1:before {
+    background: url(../img/icons/location_icon1.png) 0 0 no-repeat;
+    width: 20px;
+    height: 40px;
+    }
+ footer .footer-left .marker-icon2:before {
+    background: url(../img/icons/location_icon2.png) 0 0 no-repeat;
+    width: 20px;
+    height: 40px;
+    }
+footer .form-title:after{
+    content: '';
+    width: 30px;
+    height: 21px;
+    margin: 6px 0 0 40px;
+    background: url(../img/icons/envelope_icon.jpg) center 0 no-repeat;
+}
+footer .contact-title{
+	padding-bottom: 45px;
+}
+footer .contact-title:after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    margin: 6px 0 0 22px;
+    background: url(../img/icons/contacts_icon.png) center 0 no-repeat;
+}
+footer .social-menu{
+		padding-left: 40px;
+}
+footer .social-menu li{
+		display: inline-block;
+		margin-right: 30px;
+}
+footer .social-menu li:last-child{
+  margin-right: 0;
+}
+footer .social-menu .fa {
+    height: 34px;
+    width: 34px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 36px;
+    border-radius: 50%;
+    color: #E3545A;
+    transition: all 0.5s linear; 
+    background: #fff;
+}
+/*footer .social-menu .fa:hover{
+    color: #fff;
+    background: #E3545A;
+    box-shadow: 0 0 30px 3px #E3545A;  animation hover
+}
+*/
+footer .footer-right{
+	width: 430px; /*temp or adaptive*/
+	border-radius: 3px;
+}
+.footer-form__wrapper{
+	padding: 50px 46px;
 }
 .md-form{
 	position: relative;
-	    margin-top: 1.5rem;
+	 margin-top: 26px;
 }
-.md-form input[type=text]{
+.send-button{
+	 margin-top: 60px;
+}
+
+.md-form input[type=text],
+textarea.form-input{
 	 transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
     outline: 0;
     box-shadow: none;
@@ -420,6 +548,8 @@ footer .bg-white{
     border-radius: 0;
     box-sizing: content-box;
     background-color: transparent;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
 }
 .md-form input[type=text]:focus:not([readonly]){
     border-bottom: 1px solid #E3545A;
@@ -427,7 +557,7 @@ footer .bg-white{
 .md-form input::placeholder{
 	color: #A4ADC4;
 }
-/*.md-form .form-control {
+/*.md-form .form-input {
     margin: 0 0 .5rem;
     -webkit-border-radius: 0;
     border-radius: 0;
@@ -448,5 +578,17 @@ footer .bg-white{
     cursor: text;
     color: #757575;
 }
+/*temp footer-copyright*/
+.footer-copyright{margin: 50px;}
+@media (min-width: 992px){ /*width for footer modif*/
+	.col-lg-mod-38{
+		  flex: 0 0 38.666667%;
+      max-width: 38.666667%;
+	}
+}
+
 /*======== End footer ====*/
 
+#map>div{
+	height: 30%;
+}
