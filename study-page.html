@@ -216,61 +216,51 @@
 				<!--================ End FOR all content =================-->
 			</main>
 			<footer class="page-footer font-small blue position-relative">
-				<h3>My Google Maps Demo</h3>
 				<!--The div element for the map -->
 				<div id="map"></div>
-				<div class="container">
-					<!--start footer-wrapper-->
-					<div class="footer-wrapper">
-						<div class="bg-salmon text-white footer-left">
-							<div class="footer-contacts__wrapper">
-								<h5 class="contact-title d-flex">Контакты</h5>
-								<ul class="">
-									<li class="phone-icon contact-icons fz20">	050 335 81 22</li>
-									<li class="marker-icon1 contact-icons"> Центральний будинок культури, вул.Соборна, 183, м. ірпінь</li>
-									<li class="marker-icon2 contact-icons"> Portal lifestyle вул.Енергетиків, 2, м. Буча</span></li>
-								</ul>
-								<ul class="social-menu">
-									<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-								</ul>
-							</div>
+				<div class="bg-salmon text-white footer-left position-relative">
+					<div class="footer-contacts__wrapper">
+						<h5 class="contact-title d-flex">Контакты</h5>
+						<ul class="">
+							<li class="phone-icon contact-icons fz20"><a href="tel:+380503358122">  050 335 81 22</a></li>
+							<li class="marker-icon1 contact-icons"> Центральний будинок культури, вул.Соборна, 183, м.Ірпінь</li>
+							<!--<li class="marker-icon2 contact-icons"> Portal lifestyle вул.Енергетиків, 2, м. Буча</span></li>-->
+						</ul>
+						<ul class="social-menu">
+							<li><a target="_blank" href="https://www.instagram.com/irpin.tango.community/"><i class="fa fa-instagram"></i></a></li>
+							<li><a target="_blank" href="https://www.facebook.com/groups/irpin.tango.community"><i class="fa fa-facebook"></i></a></li>
+							<li><a target="_blank" href="https://www.youtube.com/channel/UCwG0WxNZIGqPwkPEL6HYDNA"><i class="fa fa-youtube-play"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bg-white footer-right position-relative">
+					<div class="footer-form__wrapper">
+						<h5 class="form-title position-relative d-flex align-items-center">Напиши нам </h5>
+						<div class="md-form">
+							<input type="text" id="form-contact-name" class="form-input" placeholder="Ім'я">
 						</div>
-						<div class="bg-white footer-right">
-							<div class="footer-form__wrapper">
-								<!-- Header -->
-								<h5 class="form-title position-relative d-flex align-items-center">Напиши нам </h5>
-								<div class="md-form">
-									<input type="text" id="form-contact-name" class="form-input" placeholder="Ім'я">
-								</div>
-								<div class="md-form">
-									<input type="text" id="form-contact-email" class="form-input" placeholder="e-mail">
-								</div>
-								<div class="md-form">
-									<input type="text" id="form-contact-phone" class="form-input" placeholder="Телефон">
-								</div>
-								<div class="md-form">
-									<textarea type="text" id="form-contact-message" class="form-input md-textarea" rows="3" placeholder="Повідомлення"></textarea>
-								</div>
-								<div class="md-form send-button">
-									<a class="btn-salmon__white">Відправити</a>
-								</div>
-							</div>
+						<div class="md-form">
+							<input type="text" id="form-contact-email" class="form-input" placeholder="e-mail">
+						</div>
+						<div class="md-form">
+							<input type="text" id="form-contact-phone" class="form-input" placeholder="Телефон">
+						</div>
+						<div class="md-form">
+							<textarea type="text" id="form-contact-message" class="form-input md-textarea" rows="3" placeholder="Повідомлення"></textarea>
+						</div>
+						<div class="md-form send-button">
+							<a class="btn-salmon__white">Відправити</a>
 						</div>
 					</div>
-					<!--end footer-wrapper-->
 				</div>
-			</div>
-			<div class="footer-copyright text-center py-3">© Nuestro tango 2020
-			</div>
-		</footer>
-		<script src="js/jquery-3.4.1.min.js"></script>
-		<script  src="js/bootstrap.min.js"></script>
-		<script  src="js/script.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-		<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtSEP9KcxvUOrup51F6Mk-ZeV1SGdYTuI&callback=initMap">
-		</script>
-	</body>
-</html>
+			</footer>
+			<div class="footer-copyright text-center py-3">© Nuestro tango 2020</div>
+			<script src="js/jquery-3.4.1.min.js"></script>
+			<script  src="js/bootstrap.min.js"></script>
+			<script  src="js/script.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+			<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtSEP9KcxvUOrup51F6Mk-ZeV1SGdYTuI&callback=initMap">
+			</script>
+		</body>
+	</html>

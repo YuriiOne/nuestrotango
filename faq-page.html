@@ -55,7 +55,7 @@
 			</nav>
 			<!--================ Start title page =================-->
 			<div class="title-block mask">
-				<div class="container header-title">
+				<div class="container header-title mobile-container-fluid">
 					<h1>Відповіді на Ваші питання</h1>
 					<div class="img-icons-wrapper">
 						<img src="img/icons/faq_icon.jpg" alt="faq">
@@ -67,9 +67,9 @@
 		<main>
 			<!--================ Start FOR all content =================-->
 			<section class="section-faq">
-				<div class="container">
+				<div class="container mobile-container-fluid">
 					<div class="row">
-						<div class="col-10">
+						<div class="col-lg-9 col-xs-12">
 							<div class="question-answer-group" id="accordionQuestionAnswer" itemscope="" itemtype="https://schema.org/FAQPage">
 								<div class="question-answer" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
 									<div class="question-title" id="heading1">
@@ -266,37 +266,46 @@
 				</section>
 				<!--================ End FOR all content =================-->
 			</main>
-			<footer class="page-footer font-small blue">
-				<h3>My Google Maps Demo</h3>
+			<footer class="page-footer font-small blue position-relative">
 				<!--The div element for the map -->
 				<div id="map"></div>
-				<div class="footer-copyright text-center py-3">© Nuestro tango 2020
+				<div class="bg-salmon text-white footer-left position-relative">
+					<div class="footer-contacts__wrapper">
+						<h5 class="contact-title d-flex">Контакты</h5>
+						<ul class="">
+							<li class="phone-icon contact-icons fz20"><a href="tel:+380503358122">  050 335 81 22</a></li>
+							<li class="marker-icon1 contact-icons"> Центральний будинок культури, вул.Соборна, 183, м.Ірпінь</li>
+							<!--<li class="marker-icon2 contact-icons"> Portal lifestyle вул.Енергетиків, 2, м. Буча</span></li>-->
+						</ul>
+						<ul class="social-menu">
+							<li><a target="_blank" href="https://www.instagram.com/irpin.tango.community/"><i class="fa fa-instagram"></i></a></li>
+							<li><a target="_blank" href="https://www.facebook.com/groups/irpin.tango.community"><i class="fa fa-facebook"></i></a></li>
+							<li><a target="_blank" href="https://www.youtube.com/channel/UCwG0WxNZIGqPwkPEL6HYDNA"><i class="fa fa-youtube-play"></i></a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="container">
-					<div class="row justify-content-start">
-						<div class="col-sm-12 col-md-6 col-lg-5 col-xl-4 bg-white">
-							<h5>Контакты</h5>
-							<ul class="list-unstyled">
-								<li>
-									<p>
-									<i class="fa fa-phone mr-3"></i> 050 335 81 22</p>
-								</li>
-								<li>
-									<p>
-									<i class="fa fa-map-marker mr-3"></i> центральний будинок культури, вул. соборна, 183, м. ірпінь</p>
-								</li>
-								<li>
-									<p>
-									<i class="fa fa-map-marker mr-3"></i> Portal lifestyle вул. енергетиків, 2, м. Буча</p>
-								</li>
-							</ul>
+				<div class="bg-white footer-right position-relative">
+					<div class="footer-form__wrapper">
+						<h5 class="form-title position-relative d-flex align-items-center">Напиши нам </h5>
+						<div class="md-form">
+							<input type="text" id="form-contact-name" class="form-input" placeholder="Ім'я">
 						</div>
-						<div class="col-sm-12 col-md-6 col-lg-5 col-xl-4  bg-dark">
-							<h5>Напиши нам</h5>
+						<div class="md-form">
+							<input type="text" id="form-contact-email" class="form-input" placeholder="e-mail">
+						</div>
+						<div class="md-form">
+							<input type="text" id="form-contact-phone" class="form-input" placeholder="Телефон">
+						</div>
+						<div class="md-form">
+							<textarea type="text" id="form-contact-message" class="form-input md-textarea" rows="3" placeholder="Повідомлення"></textarea>
+						</div>
+						<div class="md-form send-button">
+							<a class="btn-salmon__white">Відправити</a>
 						</div>
 					</div>
 				</div>
 			</footer>
+			<div class="footer-copyright text-center py-3">© Nuestro tango 2020</div>
 			<script src="js/jquery-3.4.1.min.js"></script>
 			<script  src="js/bootstrap.min.js"></script>
 			<script  src="js/script.js"></script>

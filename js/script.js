@@ -1,4 +1,4 @@
-    jQuery(function(t) {
+jQuery(function(t) {
       t(window).on("scroll", function() {
         var e = t(".navbar");
         e.length &&
