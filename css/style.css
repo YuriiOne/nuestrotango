@@ -101,7 +101,6 @@ button {
 
 .section-main-header, .mask {
 	height: 100%; /*temp*/
-	padding-bottom: 65px;
 }
 
 /*********    end TEMP styles    *********/
@@ -437,6 +436,9 @@ h1 {
 /*======== End section-main-price ====*/
 
 /*======== Start section-main-gallery ====*/
+.section-main-gallery{
+	background: #E5E5E5;
+}
 .section-main-gallery .main-gallery__item {
 	margin-bottom: 30px;
 }
@@ -527,6 +529,7 @@ img.zoom {
 
 .question-answer-group .fa-plus {
 	color: #E44A51;
+	padding-left: 5px;
 }
 
 .question-answer-group .fa-minus {
@@ -831,7 +834,7 @@ a.registration-expired {
 	display: flex;
 	flex-direction: column;
 }
-
+/*======== START styles for 3 mob pages=====*/
 .course__item .flip-card img, .course__item .flip-card {
 	width: 100px;
 	height: 100px;
@@ -844,7 +847,7 @@ a.registration-expired {
 .schedule__item .schedule__item-course {
 	text-align: right;
 }
-
+/******END page Study ******/
 /*======== END styles for 3 mob pages=====*/
 
 /**********START BloG ***************/
@@ -854,6 +857,9 @@ a.registration-expired {
 
 .section-blog .blog__wrap {
 	padding: 50px 0;
+}
+.section-blog img{
+	width: 332px;
 }
 .section-blog .photo-and-text:nth-child(3n+2){
 		border-top: 1px #DBE2EF solid;
