@@ -9,8 +9,8 @@
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 		<link rel='stylesheet' href="css/style.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 	</head>
 	<body id="gallery-page">
 		<header>
@@ -70,137 +70,243 @@
 			<section id="section-gallery" class="section-main-gallery section-gallery bg-white">
 				<!-- Page Content -->
 				<div class="container">
-					<h3 class="text-center">Фотогалерея / Відеогалерея</h3>
-					<div class="row">
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery1.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery1.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery2.png"  class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery2.png" class="zoom img-fluid"  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery3.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery3.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery4.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery4.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery5.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery5.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
-						<div class="col-md-4 main-gallery__item">
-							<a href="img/small-gallery/gallery6.png" class="fancybox" rel="ligthbox">
-								<img  src="img/small-gallery/gallery6.png" class="zoom img-fluid "  alt="">
-							</a>
-						</div>
+					<div class="list-group list-gallery" id="list-tab" role="tablist">
+						<a class="list-gallery-item list-gallery-item-action active" id="list-home-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="home">Фотогалерея </a>
+						<span> / </span>
+						<a class="list-gallery-item list-gallery-item-action" id="list-profile-list" data-toggle="list" href="#list-home" role="tab" aria-controls="profile">Відеогалерея</a>
 					</div>
-					<div class="text-center"><a href="#" class="btn btn-more-info">1, 2, 3</a>
-				<i class="fa fa-arrow-right"></i></div>
+					<!-- TABS start-->
+					<div class="row flex-column">
+						<div class="col">
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"><div class="row">
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="https://source.unsplash.com/ty4X72BSsXY/1279x853" data-width="1279">
+												<img class="zoom img-fluid" src="https://source.unsplash.com/ty4X72BSsXY/416x278" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery4.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery4.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="https://source.unsplash.com/KgCbvOWYuU0/1279x870" data-width="1279" data-height="853">
+												<img class="zoom img-fluid" src="https://source.unsplash.com/KgCbvOWYuU0/1279x870" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery4.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery4.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery5.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery5.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery4.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery4.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery5.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery5.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery4.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery4.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery5.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery5.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery4.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery4.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery5.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery5.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery4.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery4.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery5.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery5.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery4.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery4.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+									<!-- START gallery item  -->
+									<div class="col-sm-4 main-gallery__item">
+										<figure>
+											<a class="d-block mb-4" data-fancybox="images" href="img/small-gallery/gallery5.png" data-width="1279">
+												<img class="zoom img-fluid" src="img/small-gallery/gallery5.png" alt="tango image">
+											</a>
+										</figure>
+									</div>
+									<!-- END gallery item  -->
+								</div>
+							</div>
+							<!-- ******* START  video part  ********-->
+							<div class="tab-pane fade" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><div class="card-deck video-gallery video-deck">
+								<div class="card">
+									<a data-fancybox="" href="https://youtu.be/UlOImxSNclQ">
+										<img class="card-img-top img-fluid" src="https://i.ytimg.com/vi/UlOImxSNclQ/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDpDL-RRrnCH88FEpLzIa9MOL5kMA">
+									</a>
+									<div class="card-body">
+										<p class="card-text">
+											З життя школи Nuestro Tango: презентаційний урок
+										</p>
+									</div>
+								</div>
+								<div class="card">
+									<a data-fancybox="" href="https://youtu.be/I9c7dp7ktrY">
+										<img class="card-img-top img-fluid" src="https://i.ytimg.com/vi/I9c7dp7ktrY/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAxcwd8TcZepkU0MEnj1InypDNT8w">
+									</a>
+									<div class="card-body">
+										<p class="card-text">
+											З життя школи Nuestro Tango: курс basic
+										</p>
+									</div>
+								</div>
+								<div class="card">
+									<a data-fancybox="" href="https://youtu.be/TruXcHjF044">
+										<img class="card-img-top img-fluid" src="https://i.ytimg.com/vi/TruXcHjF044/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBFs80hf5VWl0_DjaZMdgdhnr5m1Q">
+									</a>
+									<div class="card-body">
+										<p class="card-text">
+											З життя школи Nuestro Tango: група intermediate
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ******* END  video part  ********-->
+					</div>
+				</div>
 			</div>
-		</section>
-		<!--================ End section-main-gallery =================-->
-		<!--================ End FOR all content =================-->
-	</main>
-	<footer class="page-footer font-small blue position-relative">
-		<!--The div element for the map -->
-		<div id="map"></div>
-		<div class="bg-salmon text-white footer-left position-relative">
-			<div class="footer-contacts__wrapper">
-				<h5 class="contact-title d-flex">Контакты</h5>
-				<ul class="">
-					<li class="phone-icon contact-icons fz20"><a href="tel:+380503358122">  050 335 81 22</a></li>
-					<li class="marker-icon1 contact-icons"> Центральний будинок культури, вул.Соборна, 183, м.Ірпінь</li>
-					<!--<li class="marker-icon2 contact-icons"> Portal lifestyle вул.Енергетиків, 2, м. Буча</span></li>-->
-				</ul>
-				<ul class="social-menu">
-					<li><a target="_blank" href="https://www.instagram.com/irpin.tango.community/"><i class="fa fa-instagram"></i></a></li>
-					<li><a target="_blank" href="https://www.facebook.com/groups/irpin.tango.community"><i class="fa fa-facebook"></i></a></li>
-					<li><a target="_blank" href="https://www.youtube.com/channel/UCwG0WxNZIGqPwkPEL6HYDNA"><i class="fa fa-youtube-play"></i></a></li>
-				</ul>
+			<!-- TABS END-->
+		</div>
+	</section>
+	<!--================ End section-main-gallery =================-->
+	<!--================ End FOR all content =================-->
+</main>
+<footer class="page-footer font-small blue position-relative">
+	<!--The div element for the map -->
+	<div id="map"></div>
+	<div class="bg-salmon text-white footer-left position-relative">
+		<div class="footer-contacts__wrapper">
+			<h5 class="contact-title d-flex">Контакты</h5>
+			<ul class="">
+				<li class="phone-icon contact-icons fz20"><a href="tel:+380503358122">  050 335 81 22</a></li>
+				<li class="marker-icon1 contact-icons"> Центральний будинок культури, вул.Соборна, 183, м.Ірпінь</li>
+				<!--<li class="marker-icon2 contact-icons"> Portal lifestyle вул.Енергетиків, 2, м. Буча</span></li>-->
+			</ul>
+			<ul class="social-menu">
+				<li><a target="_blank" href="https://www.instagram.com/irpin.tango.community/"><i class="fa fa-instagram"></i></a></li>
+				<li><a target="_blank" href="https://www.facebook.com/groups/irpin.tango.community"><i class="fa fa-facebook"></i></a></li>
+				<li><a target="_blank" href="https://www.youtube.com/channel/UCwG0WxNZIGqPwkPEL6HYDNA"><i class="fa fa-youtube-play"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="bg-white footer-right position-relative">
+		<div class="footer-form__wrapper">
+			<h5 class="form-title position-relative d-flex align-items-center">Напиши нам </h5>
+			<div class="md-form">
+				<input type="text" id="form-contact-name" class="form-input" placeholder="Ім'я">
+			</div>
+			<div class="md-form">
+				<input type="text" id="form-contact-email" class="form-input" placeholder="e-mail">
+			</div>
+			<div class="md-form">
+				<input type="text" id="form-contact-phone" class="form-input" placeholder="Телефон">
+			</div>
+			<div class="md-form">
+				<textarea type="text" id="form-contact-message" class="form-input md-textarea" rows="3" placeholder="Повідомлення"></textarea>
+			</div>
+			<div class="md-form send-button">
+				<a class="btn-salmon__white">Відправити</a>
 			</div>
 		</div>
-		<div class="bg-white footer-right position-relative">
-			<div class="footer-form__wrapper">
-				<h5 class="form-title position-relative d-flex align-items-center">Напиши нам </h5>
-				<div class="md-form">
-					<input type="text" id="form-contact-name" class="form-input" placeholder="Ім'я">
-				</div>
-				<div class="md-form">
-					<input type="text" id="form-contact-email" class="form-input" placeholder="e-mail">
-				</div>
-				<div class="md-form">
-					<input type="text" id="form-contact-phone" class="form-input" placeholder="Телефон">
-				</div>
-				<div class="md-form">
-					<textarea type="text" id="form-contact-message" class="form-input md-textarea" rows="3" placeholder="Повідомлення"></textarea>
-				</div>
-				<div class="md-form send-button">
-					<a class="btn-salmon__white">Відправити</a>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<div class="footer-copyright text-center py-3">© Nuestro tango 2020</div>
-	<script src="js/jquery-3.4.1.min.js"></script>
-	<script  src="js/bootstrap.min.js"></script>
-	<script  src="js/script.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-	<script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtSEP9KcxvUOrup51F6Mk-ZeV1SGdYTuI&callback=initMap">
-	</script>
+	</div>
+</footer>
+<div class="footer-copyright text-center py-3">© Nuestro tango 2020</div>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtSEP9KcxvUOrup51F6Mk-ZeV1SGdYTuI&callback=initMap">
+</script>
 </body>
 </html>
