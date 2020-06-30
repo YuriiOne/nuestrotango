@@ -1,3 +1,16 @@
+
+// start video spinner 
+jQuery(document).ready(function (t) {
+  t("#play").click(function () {
+    t(this)
+      .parent(".custom")
+      .html(
+        '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div><iframe width="560" height="315" src="https://www.youtube.com/embed/UlOImxSNclQ?autoplay=1" frameborder="0" allowfullscreen></iframe>'
+      );
+      //t('#play-video-btn').hide();
+  });
+    });
+//
 jQuery(function(t) {
       t(window).on("scroll", function() {
         var e = t(".navbar");
