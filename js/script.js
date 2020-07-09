@@ -1,4 +1,23 @@
-
+// Start script for form mail
+$(document).ready(function() {
+  //E-mail Ajax Send
+  $("form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "modx-mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+      alert("Thank you!");
+      setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
+  });
+});
+// END script for form mail
 // start video spinner 
 jQuery(document).ready(function (t) {
   t("#play").click(function () {
