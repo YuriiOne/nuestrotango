@@ -8,7 +8,7 @@ jQuery(document).ready(function (t) {
       );
     //t('#play-video-btn').hide();
   });
-  console.log("start footer form");
+  /*console.log("start footer form");
   //E-mail Ajax Send
   $("form").submit(function () {
     //Change
@@ -19,6 +19,7 @@ jQuery(document).ready(function (t) {
       url: "modx-mail.php", //Change
       data: th.serialize()
     }).done(function () {
+      console.log("после метода POST");
       alert("Thank you!");
       setTimeout(function () {
         // Done Functions
@@ -26,7 +27,7 @@ jQuery(document).ready(function (t) {
       }, 1000);
     });
     return false;
-  });
+  });*/
 });
 //
 jQuery(function (t) {
@@ -55,11 +56,11 @@ $(document).ready(function () {
 });
 function initMap() {
   if (window.innerWidth >= 768) {
-    var pos = { lat: 50.5337356, lng: 30.2188709 };
+    var pos = { lat: 50.5058355, lng: 30.2231333 };
   } else {
-    var pos = { lat: 50.5335021, lng: 30.2330265 };
+    var pos = { lat: 50.506489, lng: 30.236578 };
   }
-  // var  pos = {lat: 50.5337356, lng: 30.2188709};
+  //var  pos = {lat: 50.5337356, lng: 30.2188709}; 50.5335021, lng: 30.2330265
   //var  pos = {lat: 50.5337356, lng: 30.2188709}; position for desctop
   //var  pos = {lat: 50.5335021, lng: 30.2330265}
   var opt = {
@@ -254,7 +255,7 @@ function initMap() {
   };
   var myMap = new google.maps.Map(document.getElementById("map"), opt);
   var marker = new google.maps.Marker({
-    position: { lat: 50.5335021, lng: 30.2330265 },
+    position: { lat: 50.505602, lng: 30.2375889 },
     map: myMap,
     title: "Nuestro tango school"
   });

@@ -241,8 +241,9 @@ h1 {
 }
 .section-main-greeting .greeting__title{
 		white-space: nowrap;
-		line-height: 180%;
+		line-height: 108px;
 		padding-bottom: 37px;
+		color: #E3535A;
 }
 .section-main-greeting .greeting__description{
     padding-bottom: 32px;
@@ -253,12 +254,29 @@ h1 {
 .section-main-greeting .greeting__description:nth-of-type(2){
     padding-bottom: 77px;
 }
-.btn-more-info{
-		font-weight: bold;
-    line-height: 180%;
-    text-decoration-line: underline;
 
+.btn-more-info{
+	color: #E3535A;
+	font-weight: bold;
+  font-size: 16px;
+  line-height: 29px;
+  text-decoration-line: underline;
+  position: relative;
 }
+.btn-more-info:after{
+  content: '';
+  background: url(../img/icons/arrow-right.png) 0 0 no-repeat;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  right: -30px;
+  top: 2px;
+}
+.btn-more-info:hover{
+	color: #E3535A;
+  text-decoration-line: none;
+}
+
 .section-main-greeting .idea__image{
 	  position: absolute;
     padding: 0;
@@ -301,7 +319,7 @@ h1 {
 	}
 }
 
-@media (min-width:600px) {
+@media (min-width:600px) { /*600*/
 	.navbar.scrolling-navbar.top-nav-collapse {
 		padding-top: 5px;
 		padding-bottom: 5px;
@@ -360,21 +378,37 @@ h1 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 83% center;
+	padding-top: 135px;
 }
 
 /* \header*/
 
 /*======== Start section-main-price =====*/
 .section-main-price {
-	background: linear-gradient(90.52deg, rgba(255, 46, 0, 0.5) 0.12%, rgba(255, 214, 0, 0.2) 50.52%, rgba(24, 172, 255, 0.2) 99.87%);
-}
+  background: -o-linear-gradient(359.48deg, rgba(255, 46, 0, 0.5) 0.12%, rgba(255, 214, 0, 0.2) 50.52%, rgba(24, 172, 255, 0.2) 99.87%);
+  background: linear-gradient(90.52deg, rgba(255, 46, 0, 0.5) 0.12%, rgba(255, 214, 0, 0.2) 50.52%, rgba(24, 172, 255, 0.2) 99.87%);}
 .block-main-price{
 	margin-top: -277px;
 }
-.block-main-price h3{
-		    margin-bottom: 55px;
+/*global styles*/
+.title-gradient__wrapper{
+	display: flex;
+  margin-bottom: 55px;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+	
+
+.title-gradient {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(269.97deg, #5F98DA 0%, #E4BD31 50%, #E3535A 100%);
+  margin-left: 50px;
+}
 }
 /*======== START styles for 3 mob pages=====*/
+
 .pricing-card {
 	padding: 30px;
 	background: #fff;
@@ -382,10 +416,26 @@ h1 {
 	max-width: 400px;
   margin: 0 auto;
 }
-.btn-more-course{
-	display: inline-block;
-	
+.pricing-card .btn-more-course{
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  text-decoration-line: underline;
+  color: #1E61E2;
+  padding-left: 27px;
+  margin-top: 20px;
 }
+.pricing-card .btn-more-course:hover{
+  text-decoration-line: unset;
+}
+.pricing-card .btn-more-course .fa-info-circle{
+  position: absolute;
+  font-size: 21px;
+  color: #CCD1DA;
+  left: 0;
+  top: 3px;
+}
+
 .section-main-price .basic-course {
 	border-top: 10px solid #E3545A;
 }
@@ -445,31 +495,109 @@ h1 {
 	display: flex;
   flex-wrap: wrap;
 }
-.modal-student-group .student-group__left{
+.modal-student-group .student-group__left{ 
 	flex-basis: 345px;
 	padding: 38px 45px 40px 40px;
 }
-.modal-student-group .student-group__right{
+.basic-course .student-group__right,
+.intermediate-course .student-group__right{
 	flex-basis: 305px;
 	background: #F3F6F9;
 	padding: 38px 20px 40px 33px;
 }
-.student-group__right .schedule__item{
-	padding: 15px 0;
+/* 44 start for private modal width 775px*/
+.private-course .student-group__right{
+	flex-basis: 430px;
+	background: #F3F6F9;
+	padding: 38px 30px 0px 33px;
 }
+.private-course .course__teachers{
+	margin-bottom: 20px;
+}
+.private-course .course__teachers .group-title{
+	margin-bottom: 25px;
+}
+.private-course .schedule-table__row{
+	display: flex;
+	font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #434A5B;
+}
+.private-course .schedule-table__row>.schedule__item{
+	border: 1px solid #C3CEDE;
+	margin: 0 -1px -1px 0;
+	padding: 7px;
+}
+
+/* 44 end for private modal window only*/
+.intermediate-course .schedule-table__row,
+.basic-course .schedule-table__row{
+	display: flex;
+	padding: 15px 0;
+	border-top: 1px solid #DFE5EC;
+}
+.intermediate-course .schedule-table__row:last-child,
+.basic-course .schedule-table__row:last-child{
+	border-bottom: 1px solid #DFE5EC;
+}
+
 .teacher-modal__wrapper{
 	display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
 }
+/* schedule for all 3 modal */
+.course__item .flip-card img, .course__item .flip-card {
+	width: 100px;
+	height: 100px;
+}
+.course__item .flip-card{
+	margin-bottom: 15px;
+}
+.schedule-table__row .schedule__item {
+	flex-basis: 33%;
+}
+.basic-course .schedule-table .schedule__item-hours,
+.intermediate-course .schedule-table .schedule__item-hours,
+.private-course .schedule-table .schedule__item-price,
+.private-course .schedule-table .schedule__item-teacher {
+	font-weight: bold;
+}
+.schedule-table__row .schedule__item-course {
+	text-align: right;
+}
+
+/* END schedule for all 3 modal */
 .course__item .teacher-block{
 	padding: 0 15px;
 }
 .basic-course.modal-student-group .flip-card img{
 	border: 2px solid #E3545A;
 }
+.intermediate-course.modal-student-group .flip-card img{
+	border: 2px solid #E4BD31;
+}
+.private-course.modal-student-group .flip-card img{
+	border: 2px solid #5F98DA;
+}
 
+.basic-course .schedule__item-course{	color: #E3545A;}
+/*.private-course .schedule__item-course{	color: #5F98DA;}*/
+.intermediate-course .schedule__item-course{	color: #E4BD31;}
+
+.basic-course .course__teachers,
+.intermediate-course .course__teachers{
+	margin-bottom: 60px;
+}
+.basic-course .course__teachers .group-title,
+.intermediate-course .course__teachers .group-title{
+	margin-bottom: 20px;
+}
+.basic-course .course__location{ /*basic-cours for last child*/
+	margin-bottom: 0;
+}
 .student-group__right .teacher__name{
 	text-align: center;
 	    font-weight: bold;
@@ -483,8 +611,26 @@ h1 {
 	top: 20px;
 	right: 20px;
 	color: grey;
-	font-size: 30px;
+	font-size: 22px;
+	cursor: pointer;
 }
+.close-modal-window__btn:hover{ /*temp */
+	color: #000;
+}
+/* start modal windows icon*/
+.intermediate-course .school-adress__lisova.marker-icon1:before{
+	background: url(../img/icons/location_icon_yellow.png) 0 0 no-repeat;
+}
+.private-course .school-adress__lisova.marker-icon1:before{
+	background: url(../img/icons/location_icon_blue.png) 0 0 no-repeat;
+}
+.school-adress__lisova.marker-icon1:before{
+	background: url(../img/icons/location_icon_salmon1.png) 0 0 no-repeat;
+}
+.school-adress__bucha.marker-icon1:before{
+	background: url(../img/icons/location_icon_salmon2.png) 0 0 no-repeat;
+}
+/*end modal windows icon*/
 /* END styles for modal price */
 
 /*======== End section-main-price ====*/
@@ -810,8 +956,8 @@ a.registration-expired {
 	margin-left: -15px;
 	padding: 40px 0;
 }
-.section-teachers h3{
-	margin-bottom: 90px;
+.section-teachers .title-gradient__wrapper{
+  margin-bottom: 90px;
 }
 .section-teachers .teacher-block {
 	min-width: 300px;
@@ -1126,21 +1272,7 @@ a.registration-expired {
 .subscription__item span{
 	font-weight: bold;
 }
-/*======== START styles for 3 mob pages=====*/
-.course__item .flip-card img, .course__item .flip-card {
-	width: 100px;
-	height: 100px;
-}
-
-.schedule__item .schedule__item-day, .schedule__item .schedule__item-hours, .schedule__item .schedule__item-course {
-	flex-basis: 33%;
-}
-
-.schedule__item .schedule__item-course {
-	text-align: right;
-}
 /******END page Study ******/
-/*======== END styles for 3 mob pages=====*/
 
 /**********START BloG ***************/
 #blog-page {
@@ -1260,14 +1392,7 @@ footer .phone-icon a {
 .marker-icon1:before {
 	background: url(../img/icons/location_icon.png) 0 0 no-repeat;
 }
-/* start modal windows icon*/
-.school-adress__lisova.marker-icon1:before{
-	background: url(../img/icons/location_icon1.png) 0 0 no-repeat;
-}
-.school-adress__bucha.marker-icon1:before{
-	background: url(../img/icons/location_icon2.png) 0 0 no-repeat;
-}
-/*end modal windows icon*/
+
 footer .form-title:after {
 	content: '';
 	width: 30px;
@@ -1351,7 +1476,8 @@ footer .send-button {
 	height: calc(1.5em + .75rem + 2px);
 }
 
-.md-form input[type=text]:focus:not([readonly]) {
+.md-form input:focus:not([readonly]),
+.md-form .form-input:focus:not([readonly]) {
 	border-bottom: 1px solid #E3545A;
 }
 
@@ -1443,3 +1569,23 @@ footer .send-button {
 /*.fancybox-slide--iframe .fancybox-content {
     max-width: 650px;
 }*/
+
+/*
+temp for mdal*/
+
+@media (max-width: 575px){
+	.modal-student-group .student-group__right {
+    flex-basis: 100%;
+    background: #fff;
+    padding: 38px 20px 40px 33px;
+}
+.modal-student-group .student-group__left {
+    flex-basis: 100%;
+    padding: 38px 45px 40px 40px;
+}
+.modal-wrapper__student-group{
+	margin: 5px;
+}
+}
+/* end
+temp for mdal*/
