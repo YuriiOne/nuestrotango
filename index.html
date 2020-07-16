@@ -15,38 +15,38 @@
 	<body id="main-page">
 		<header class="position-relative">
 			<!--================ Navigation & Intro =================-->
-			<nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
+			<nav class="navbar navbar-expand-lg fixed-top navbar-dark scrolling-navbar">
 				<div class="container">
 					<a class="navbar-logo" href="#" disabled><img src="img/logo.png" alt="logo"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+					<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 						<!--Links-->
 						<ul class="navbar-nav smooth-scroll">
-							<li class="nav-item">
-								<a class="nav-link" href="tel:+380503358122" data-offset="80">050 335 81 22</a>
+							<li class="nav-item nav-phone">
+								<a class="nav-item__phone" href="tel:+380503358122" data-offset="80">050 335 81 22</a>
 							</li>
 						</ul>
 						<!--Social Icons-->
 						<ul class="navbar-nav nav-flex-icons font-weight-bold">
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="about-page.html" data-offset="80">про нас</a>
+								<a class="nav-item__link" href="about-page.html" data-offset="80">про нас</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="study-page.html">навчання</a>
+								<a class="nav-item__link" href="study-page.html">навчання</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="events-page.html">події</a>
+								<a class="nav-item__link" href="events-page.html">події</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="faq-page.html">faq</a>
+								<a class="nav-item__link" href="faq-page.html">faq</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="gallery-page.html">галерея</a>
+								<a class="nav-item__link" href="gallery-page.html">галерея</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="blog-page.html">блог</a>
+								<a class="nav-item__link" href="blog-page.html">блог</a>
 							</li>
 						</ul>
 						<!--nav menu https://mdbootstrap.com/previews/templates/landing-page/html/Landing-Page-Medical.html -->
@@ -109,7 +109,7 @@
 						</div>
 						<div class="row">
 							<!--*************/ Start Pricing card 1**************-->
-							<div class="col-lg-4 col-md-12">
+							<div class="col-lg-4 col-md-12 pricing-card__block">
 								<div class="basic-course pricing-card">
 									<div class="pricing-card__info">
 										<div class="basic-course__item course__item">
@@ -135,7 +135,7 @@
 							<!--******************************************-->
 							<!--******************************************-->
 							<!--**************Pricing card 2**************-->
-							<div class="col-lg-4 col-md-12">
+							<div class="col-lg-4 col-md-12 pricing-card__block">
 								<div class="intermediate-course pricing-card">
 									<div class="pricing-card__info">
 										<div class="intermediate-course__item course__item">
@@ -161,7 +161,7 @@
 							<!--******************************************-->
 							<!--******************************************-->
 							<!--*************Pricing card 3***************-->
-							<div class="col-lg-4 col-md-12">
+							<div class="col-lg-4 col-md-12 pricing-card__block">
 								<div class="private-course pricing-card">
 									<div class="pricing-card__info">
 										<div class="private-course__item course__item">
@@ -256,6 +256,7 @@
 						</section>
 						<!--================ End section-main-gallery =================-->
 					</main>
+					<!--================ Start footer =================-->
 					<footer class="page-footer font-small blue position-relative">
 						<!--The div element for the map -->
 						<div id="map"></div>
@@ -303,6 +304,7 @@
 						</div>
 					</footer>
 					<div class="footer-copyright text-center py-3">© Nuestro tango 2020</div>
+					<!--================ END footer =================-->
 					<!--*************START  Modal Windows**************-->
 					<!-- start modal BASIC!-->
 					<div id="basicModal" class="modal-wrapper__student-group" style="display: none;max-width:650px;">

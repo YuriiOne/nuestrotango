@@ -2,10 +2,10 @@
 	font-family: CenturyGothic-Bold;
 	src: url(../fonts/gothic.ttf);
 }
-
+*{
+	transition: .5s;
+}
 /*********     start global styles        *********/
-
-
 .info-title {
 	font-size: 22px;
 	font-weight: bold;
@@ -90,9 +90,6 @@ h5 {
 	font-weight: bold;
 }
 
-#main-page a.navbar-brand {
-	pointer-events: none;
-}
 
 .img-icons-wrapper img {
 
@@ -143,11 +140,11 @@ body {
 a>i.fa.fa-plus {
 	padding-left: 10px; /*for buttons plus*/
 }
-
-a.btn-salmon__white,
-
 /**buttons first bg after color text*/
-a.btn-white__salmon, a.btn-blue__white, a.btn-yellow__white {
+a.btn-salmon__white,
+a.btn-white__salmon,
+ a.btn-blue__white,
+  a.btn-yellow__white {
 	background: #E3545A;
 	border-radius: 60px;
 	padding: 13px 27px;
@@ -178,6 +175,103 @@ a.btn-yellow__white {
 /* end for all pages */
 
 /*nav menu потом стилизируем под https://mdbootstrap.com/previews/templates/landing-page/html/Landing-Page-Medical.html#*/
+/****   start navbar*****/ 
+
+/* nav menu */
+.navbar { /*new 16*/
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+#main-page a.navbar-logo {
+	pointer-events: none;
+}
+.navbar a.navbar-logo{
+	margin-right: 70px;
+}
+.navbar-dark .navbar-toggler{border:none;}
+#main-page .smooth-scroll{
+	order: 1;
+}
+#main-page .nav-flex-icons{
+	order: 2;
+}
+.navbar-nav.smooth-scroll{
+	order: 2;
+}
+.navbar .nav-item__phone{
+	font-weight: normal;
+	position: relative;
+	font-size: 20px;
+	line-height: 21px;
+	color: #FFFFFF;
+	padding-left: 33px;
+	text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+.navbar .nav-item__phone:before{
+	content: '';
+  background: url(../img/icons/phone_nav_menu_icon.png) 0 0 no-repeat;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0px;
+  top: 4px;
+}
+#main-page .navbar .nav-item__link{
+	display: block;
+	padding: 8px 19px;
+	color: rgba(15, 15, 15, 0.8);
+}
+#main-page .navbar.top-nav-collapse .nav-item__link{
+	color: #fff;
+}
+.navbar .nav-item__link{ /* for all rest pages. not index*/
+	display: block;
+	padding: 8px 19px;
+	color: #fff;
+}
+
+.section-main-header .block__main-header {
+	z-index: 2;
+}
+
+@media (min-width:600px) { /*600*/
+	.navbar.scrolling-navbar.top-nav-collapse {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background: #E3535A;
+		-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -o-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+	}
+}
+@media (max-width:991px) {
+	.navbar.fixed-top.scrolling-navbar {
+		background: #E3535A;
+	}
+	#main-page .navbar .nav-item__link,
+	.navbar .nav-item__link {
+    color: #fff;
+    padding: 8px 6px;
+  }
+  .navbar .nav-phone{
+  	padding-left: 6px;
+  }
+  .navbar-collapse{
+  	margin-top: 10px;
+  }
+
+}
+
+/*header*/
+
+.section-main-header {
+	background-image: url(../img/header_main_page_mobile_bg_normal.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 83% center;
+	padding-top: 90px;
+	padding-bottom: 60px;
+}
 .mask-salmon {
 	position: absolute;
 	height: 100%;
@@ -186,9 +280,7 @@ a.btn-yellow__white {
 	top: 0;
 	background: rgba(227, 83, 90, 0.8);
 }
-
 .pre-header .page-title {
-
 	/*for all h1 titles*/
 	font-size: 40px;
 	line-height: 105.11%;
@@ -232,6 +324,49 @@ h1 {
 			text-align: center;
 		}
 }
+@media (min-width:992px) {
+	.mask-salmon {
+		width: 45%;
+	}
+
+	.navbar:not(.top-nav-collapse) {
+		background: 0 0;
+		padding-top: 40px;
+		box-shadow: none;
+		transition: .5s;
+	}
+
+}
+
+@media (min-width:768px) {
+	header {
+		height: 726px;
+	}
+
+	.section-main-header {
+		display: flex;
+		align-items: center;
+		padding: 130px 0 100px 0;
+	}
+
+	.pre-header .page-title {
+		font-size: 80px;
+		padding-bottom: 20px;
+	}
+
+	.pre-header .main-header__text {
+		font-size: 22px;
+		width: 65%;
+		line-height: 27px;
+		padding-bottom: 60px;
+	}
+}
+
+
+
+/* \header*/
+/*********  END navbar 
+************/
 .section-main-greeting{
 	padding-bottom: 370px;
 }
@@ -284,49 +419,7 @@ h1 {
     max-width: 53%;
 }
 
-@media (min-width:992px) {
-	.mask-salmon {
-		width: 45%;
-	}
 
-	.navbar:not(.top-nav-collapse) {
-		background: 0 0;
-		padding-top: 40px;
-	}
-
-}
-
-@media (min-width:768px) {
-	header {
-		height: 726px;
-	}
-
-	.section-main-header {
-		display: flex;
-		align-items: center;
-	}
-
-	.pre-header .page-title {
-		font-size: 80px;
-		padding-bottom: 20px;
-	}
-
-	.pre-header .main-header__text {
-		font-size: 22px;
-		width: 65%;
-		line-height: 27px;
-		padding-bottom: 60px;
-	}
-}
-
-@media (min-width:600px) { /*600*/
-	.navbar.scrolling-navbar.top-nav-collapse {
-		padding-top: 5px;
-		padding-bottom: 5px;
-		background: #E3535A;
-	}
-
-}
 @media (max-width:991px) {
   .section-main-greeting{
  		padding-top: 45px;
@@ -339,7 +432,6 @@ h1 {
   	margin-top: 20px; /*temp1*/
   }
   .section-main-greeting .greeting__title {
-    padding-bottom: 37px;
     text-align: center;
     padding-bottom: 45px;
   }
@@ -351,6 +443,9 @@ h1 {
 	.section-main-greeting .greeting__description{
 		font-size: 16px;
 	}
+	 .section-main-greeting .greeting__title {
+    line-height: 34px;
+  }
 }
 @media (max-width:575px){
 	.section-main-greeting .photo-and-text {
@@ -360,28 +455,7 @@ h1 {
 	text-align: center;
 	}
 }
-/* nav menu */
-.section-main-header .block__main-header {
-	z-index: 2;
-}
 
-@media (max-width:991px) {
-	.navbar.fixed-top.scrolling-navbar {
-		background: #E3535A;
-	}
-
-}
-
-/*header*/
-.section-main-header {
-	background-image: url(../img/header_main_page_mobile_bg_normal.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 83% center;
-	padding-top: 135px;
-}
-
-/* \header*/
 
 /*======== Start section-main-price =====*/
 .section-main-price {
@@ -1589,3 +1663,16 @@ temp for mdal*/
 }
 /* end
 temp for mdal*/
+/* START global for all pages media query*/
+@media (max-width: 767px){
+	a.btn-salmon__white,
+	a.btn-white__salmon,
+ 	a.btn-blue__white,
+  a.btn-yellow__white {
+		padding: 13px 20px;
+		font-size: 14px;
+		line-height: 17px;
+}
+}
+
+/* END global for all pages media query*/

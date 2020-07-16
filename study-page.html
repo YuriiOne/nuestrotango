@@ -15,44 +15,45 @@
 	<body id="study-page">
 		<header>
 			<!--================ Navigation & Intro =================-->
-			<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+			<nav class="navbar navbar-expand-lg fixed-top navbar-dark scrolling-navbar">
 				<div class="container">
-					<a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>
+					<a class="navbar-logo" href="#" disabled><img src="img/logo.png" alt="logo"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 						<!--Links-->
-						<ul class="navbar-nav mr-auto smooth-scroll">
-							<li class="nav-item">
-								<a class="nav-link" href="tel:+380503358122" data-offset="80">050 335 81 22</a>
+						<ul class="navbar-nav smooth-scroll">
+							<li class="nav-item nav-phone">
+								<a class="nav-item__phone" href="tel:+380503358122" data-offset="80">050 335 81 22</a>
 							</li>
 						</ul>
 						<!--Social Icons-->
 						<ul class="navbar-nav nav-flex-icons font-weight-bold">
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="about-page.html" data-offset="80">про нас</a>
+								<a class="nav-item__link" href="about-page.html" data-offset="80">про нас</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="study-page.html">навчання</a>
+								<a class="nav-item__link" href="study-page.html">навчання</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="events-page.html">події</a>
+								<a class="nav-item__link" href="events-page.html">події</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="faq-page.html">faq</a>
+								<a class="nav-item__link" href="faq-page.html">faq</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="gallery-page.html">галерея</a>
+								<a class="nav-item__link" href="gallery-page.html">галерея</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" href="blog-page.html">блог</a>
+								<a class="nav-item__link" href="blog-page.html">блог</a>
 							</li>
 						</ul>
 						<!--nav menu https://mdbootstrap.com/previews/templates/landing-page/html/Landing-Page-Medical.html -->
 					</div>
 				</div>
 			</nav>
+			<!--================ End Navigation & Intro =================-->
 			<!--================ Start title page =================-->
 			<div class="title-block mask">
 				<div class="container header-title">
@@ -211,6 +212,7 @@
 				<!--================ End =================-->
 				<!--================ End FOR all content =================-->
 			</main>
+			<!--================ Start footer =================-->
 			<footer class="page-footer font-small blue position-relative">
 				<!--The div element for the map -->
 				<div id="map"></div>
@@ -219,7 +221,7 @@
 						<h5 class="contact-title d-flex">Контакты</h5>
 						<ul class="">
 							<li class="phone-icon contact-icons fz20"><a href="tel:+380503358122">  050 335 81 22</a></li>
-							<li class="marker-icon1 contact-icons"> Центральний будинок культури, вул.Соборна, 183, м.Ірпінь</li>
+							<li class="marker-icon1 contact-icons">вул.Лісов 2П, м.Ірпінь</li>
 							<!--<li class="marker-icon2 contact-icons"> Portal lifestyle вул.Енергетиків, 2, м. Буча</span></li>-->
 						</ul>
 						<ul class="social-menu">
@@ -231,26 +233,34 @@
 				</div>
 				<div class="bg-white footer-right position-relative">
 					<div class="footer-form__wrapper">
-						<h5 class="form-title position-relative d-flex align-items-center">Напиши нам </h5>
-						<div class="md-form">
-							<input type="text" id="form-contact-name" class="form-input" placeholder="Ім'я">
-						</div>
-						<div class="md-form">
-							<input type="text" id="form-contact-email" class="form-input" placeholder="e-mail">
-						</div>
-						<div class="md-form">
-							<input type="text" id="form-contact-phone" class="form-input" placeholder="Телефон">
-						</div>
-						<div class="md-form">
-							<textarea type="text" id="form-contact-message" class="form-input md-textarea" rows="3" placeholder="Повідомлення"></textarea>
-						</div>
-						<div class="md-form send-button">
-							<a class="btn-salmon__white">Відправити</a>
-						</div>
+						<form>
+							<!-- Hidden Fields -->
+							<input type="hidden" name="project_name" value="Nuestrotango">
+							<input type="hidden" name="admin_email" value="admin@nuestrotango.com">
+							<input type="hidden" name="form_subject" value="Nuestrotango form">
+							<!-- END Hidden Fields -->
+							<h5 class="form-title position-relative d-flex align-items-center">Напиши нам </h5>
+							<div class="md-form">
+								<input name="Имя" type="text" class="form-input" placeholder="Ім'я" required>
+							</div>
+							<div class="md-form">
+								<input name="e-mail" type="email" class="form-input" placeholder="e-mail" required>
+							</div>
+							<div class="md-form">
+								<input name="Телефон" type="phone" class="form-input" placeholder="Телефон" required>
+							</div>
+							<div class="md-form">
+								<textarea name="Повідомлення" type="text" class="form-input md-textarea" rows="3" placeholder="Повідомлення" required></textarea>
+							</div>
+							<div class="md-form send-button">
+								<input type="submit" value="Відправити">
+							</div>
+						</form>
 					</div>
 				</div>
 			</footer>
 			<div class="footer-copyright text-center py-3">© Nuestro tango 2020</div>
+			<!--================ END footer =================-->
 			<script src="js/jquery-3.5.1.min.js"></script>
 			<script src="js/bootstrap.min.js"></script>
 			<script src="js/script.js"></script>
