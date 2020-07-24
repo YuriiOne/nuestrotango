@@ -1,36 +1,6 @@
-// start video spinner
+
+//jQuery(document).ready(function (t) or jQuery(function (t) {
 jQuery(document).ready(function (t) {
-  t("#play").click(function () {
-    t(this)
-      .parent(".custom")
-      .html(
-        '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div><iframe width="560" height="315" src="https://www.youtube.com/embed/UlOImxSNclQ?autoplay=1" frameborder="0" allowfullscreen></iframe>'
-      );
-    //t('#play-video-btn').hide();
-  });
-  /*console.log("start footer form");
-  //E-mail Ajax Send
-  $("form").submit(function () {
-    //Change
-    var th = $(this);
-    console.log("до аякса");
-    $.ajax({
-      type: "POST",
-      url: "modx-mail.php", //Change
-      data: th.serialize()
-    }).done(function () {
-      console.log("после метода POST");
-      alert("Thank you!");
-      setTimeout(function () {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });*/
-});
-//
-jQuery(function (t) {
   t(window).on("scroll", function () {
     var e = t(".navbar");
     e.length &&
