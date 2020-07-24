@@ -383,7 +383,7 @@ h1 {
     line-height: 180%;
     color: #4A4A4A;
 }
-.section-main-greeting .greeting__description:nth-of-type(2){
+.section-main-greeting .greeting__description:last-of-type{
     padding-bottom: 77px;
 }
 
@@ -918,6 +918,7 @@ img.zoom {
 }
 .event-item:first-child {
 	flex-basis: 120px;
+	min-width: 120px;
 }
 .event-item{
 	padding: 18px 25px;
@@ -968,6 +969,7 @@ img.zoom {
 
 a.registration-expired {
 	background: #87919a;
+	pointer-events: none;
 }
 
 /**TEMP UP*/
@@ -1032,6 +1034,7 @@ a.registration-expired {
 }
 .whoWeAre__founders{
 	display: flex;
+	justify-content: space-around;
 }
 .whoWeAre__info h3{
 	margin-bottom: 40px;
@@ -1040,13 +1043,15 @@ a.registration-expired {
 	font-size: 18px;
 	line-height: 22px;
 }
+.section-about-us .teacher__name,
+.section-teachers .teacher__name{
+	margin-bottom: 15px;
+}
 .teacher__info {
 	font-size: 14px;
 	line-height: 17px;
 	text-align: center;
-	margin-top: 15px;
 }
-
 .photo-and-text {
 	display: flex;
 	margin-right: -15px;
@@ -1061,6 +1066,9 @@ a.registration-expired {
 	text-align: center;
 	margin-bottom: 160px;
 	padding: 0 35px;
+}
+.section-teachers .teacher-block.teacher-nuestrotango{
+	flex-basis: 50%;
 }
 
 .block-whoWeAre .teacher-block {
@@ -1413,10 +1421,14 @@ end study before video
 @media (max-width: 767px){
 	.lessons-wrapper.wrapper-group{
 		margin-bottom: 45px;
+		margin-left: -15px;
+		margin-right: -15px;
 	}
 	.lessons-wrapper.wrapper-individual{
 		margin-bottom: 0;
 		background: #f8f8f8;
+		margin-left: -15px;
+		margin-right: -15px;
 	}
 	.section-lessons{
 		padding-top: 90px;
