@@ -9,15 +9,15 @@
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/reset.css">
-		<link rel='stylesheet' href="css/style.css" />
 		<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+		<link rel='stylesheet' href="css/style.css" />
 	</head>
 	<body id="study-page">
 		<header>
 			<!--================ Navigation & Intro =================-->
 			<nav class="navbar navbar-expand-lg fixed-top navbar-dark scrolling-navbar">
 				<div class="container">
-					<a class="navbar-logo" href="#" disabled><img src="img/logo.png" alt="logo"></a>
+					<a class="navbar-logo" href="index.html"><img src="img/logo.png" alt="logo"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 					</button>
@@ -71,12 +71,12 @@
 			<section id="" class="section-lessons">
 				<div class="container">
 					<h3 class="study_title">Групові уроки</h3>
-					<div class="lessons-wrapper">
+					<div class="lessons-wrapper wrapper-group">
 						<div class="col-md-5 lessons-left lessons-group">
 							<div class="lessons__season color-salmon">
 								<div class="season__info"><span>4</span>навчальні сесії щороку</div>
 							</div>
-							<div class="block-register">
+							<div class="block-register d-none d-md-block">
 								<div class="info-title color-salmon">Запис в групу</div>
 								<div class="lessons__description">Для запису в групу необхідна попередня реєстрація та оплата участі. партнер, вміння танцювати, попередній досвід танго не обов’язкові</div>
 								<div class="events__registration">
@@ -87,18 +87,25 @@
 						<div class="col-md-7 lessons-right lessons-group">
 							<div class="lessons__for-you">
 								<div class="lessons__title info-title">Для кого </div>
-								<div class="lessons__description">у вересні, листопаді, лютому та квітні ми набираємо групи початківців на курс basic. також цей курс для тих, хто хоче освіжити ази або ж опанувати “іншу роль”. </div>
+								<div class="lessons__description">У вересні, листопаді, лютому та квітні ми набираємо групи початківців на курс basic. також цей курс для тих, хто хоче освіжити ази або ж опанувати “іншу роль”. </div>
 								<div class="lessons__description">тим, хто вже має базову підготовку з аргентинського танго та бажає продовжити навчання, ми пропонуємо курс intermediate. </div>
 							</div>
 							<div class="lessons__for-you">
 								<div class="lessons__title info-title">Підхід </div>
-								<div class="lessons__description">структурована прогресивна програма та невеликі збалансовані за ролями “лідер-фоловер” групи допоможуть вже за два місяці регулярних занять досягнути змін у своєму розумінні танго, володінні тілом та елементами танцю. Навантаження: 1 урок тривалістю 2 години 30 хвилин та 1 практика тривалістю 1 година 15 хвилин на тиждень. </div>
+								<div class="lessons__description">Структурована прогресивна програма та невеликі збалансовані за ролями “лідер-фоловер” групи допоможуть вже за два місяці регулярних занять досягнути змін у своєму розумінні танго, володінні тілом та елементами танцю. Навантаження: 1 урок тривалістю 2 години 30 хвилин та 1 практика тривалістю 1 година 15 хвилин на тиждень. </div>
+							</div>
+						</div>
+						<div class="block-register d-md-none">
+							<div class="info-title color-salmon">Запис в групу</div>
+							<div class="lessons__description mb-5">Для запису в групу необхідна попередня реєстрація та оплата участі. партнер, вміння танцювати, попередній досвід танго не обов’язкові</div>
+							<div class="events__registration">
+								<a target="_blank" href="https://forms.gle/Z6uRJLE9Xb5UpEX88" class="btn-salmon__white">Зареєструватися <i class="fa fa-plus"></i></a>
 							</div>
 						</div>
 					</div>
 					<!--2nd block lessons-->
-					<h3 class="study_title">Індивідуальні уроки</h3>
-					<div class="lessons-wrapper">
+					<h3 class="study_title d-none d-md-block">Індивідуальні уроки</h3>
+					<div class="lessons-wrapper wrapper-individual">
 						<div class="col-md-5 lessons-left lessons-individual">
 							<div class="block-register">
 								<div class="info-title color-blue">Запис на індивідуальні заняття</div>
@@ -109,6 +116,7 @@
 							</div>
 						</div>
 						<div class="col-md-7 lessons-right lessons-individual">
+							<h3 class="study_title d-md-none">Індивідуальні уроки</h3>
 							<div class="lessons__for-you">
 								<div class="lessons__title info-title">Для кого </div>
 								<div class="lessons__description">Курс для тих, хто бажає вивчати аргентинське танго у власному темпі та за власним графіком, пропонуємо індивідуальні уроки. Займатися можна соло або парою з викладачами нашої школи або із запрошеними викладачами.</div>
@@ -122,9 +130,10 @@
 			<!--================ Start  =================-->
 			<section id="" class="section-video">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-5">
-							<h3 class="video_title">Презентаційний урок</h3>
+					<div class="row justify-content-center">
+						<h3 class="video_title d-md-none">Презентаційний урок</h3>
+						<div class="col-md-5 video__left-wraper">
+							<h3 class="video_title d-none d-md-block">Презентаційний урок</h3>
 							<div class="presentation-lesson">
 								<div class="presentation__description">перед початком кожної сесії ми проводимо презентаційний урок для тих, хто бажає познайомитися зі школою та прийняти рішення про навчання.</div>
 								<div class="presentation__description">пропустили презентаційний урок? будьте нашим гостем на будь-якому з регулярних уроків за спеціальною ціною 50 грн.</div>
@@ -133,11 +142,11 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6 offset-md-1">
+						<div class="col-md-6 offset-md-1 video__right-wraper">
 							<div class="video__open-lesson">
 								<!--================ Start video test =================-->
 								<div class="custom">
-									<div id="play">&nbsp;</div>
+									<a data-fancybox="" href="https://youtu.be/UlOImxSNclQ"><div id="play"></div></a>
 									<div id="play-video-btn" class="video-title">Переглянути відео</div>
 								</div>
 								<!--================ End video test=================-->
@@ -154,7 +163,7 @@
 						<h3>Розклад</h3>
 						<div class="title-gradient"></div>
 					</div>
-					<div class="row schedule__wrapper">
+					<div class="schedule__wrapper">
 						<div class="schedule__block">
 							<div class="schedule__name">Група <span class="color-salmon">basic A: </span></div>
 							<div class="schedule__day">Неділя</div>
@@ -182,9 +191,10 @@
 			<!--================ Start  =================-->
 			<section id="" class="section-price">
 				<div class="container">
-					<div class="row">
+					<div class="price-block__wrapper">
+						<h3 class="study_title d-md-none">Вартість</h3>
 						<div class="price-block price-block__cost">
-							<h3 class="study_title">Вартість</h3>
+							<h3 class="study_title d-none d-lg-block">Вартість</h3>
 							<div class="price-block__inner">
 								<div class="price__discount-title color-salmon">Постійні знижки на абонементи</div>
 								<p class="price__discount-info"><span>25% </span>для учасників АТО та пенсіонерів</p>
