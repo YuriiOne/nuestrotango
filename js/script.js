@@ -227,7 +227,7 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: { lat: 50.505602, lng: 30.2375889 },
     map: myMap,
-    title: "Nuestro tango school"
+    title: "Nuestro Tango School"
   });
   console.log(marker);
   var info = new google.maps.InfoWindow({
