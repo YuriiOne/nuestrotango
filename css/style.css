@@ -1128,9 +1128,9 @@ a.registration-expired {
 .video_title{
 	margin-bottom: 35px
 }
-.presentation-lesson{
+/*.presentation-lesson{
 	margin-right: -15px;
-}
+}*/
 .presentation__description {
     font-size: 18px;
     line-height: 22px;
@@ -1270,13 +1270,13 @@ end study before video
 }
 .schedule__block .schedule__name{
 	font-size: 22px;
-	margin-bottom: 33px;
+	margin-bottom: 15px;
 }
 .schedule__block .schedule__name>span{
 	font-weight: bold;
 }
 .schedule__block .schedule__day{
-	margin-bottom: 5px;
+	margin-bottom: 30px;
 	font-weight: bold;
 }
 /*price block before footer*/
@@ -1660,7 +1660,7 @@ footer .footer-contacts__wrapper {
 .contact-icons { /*for all*/
 	position: relative;
 	padding: 0 0 51px 37px;
-	line-height: 105.11%;
+	line-height: 15px;
 }
 
 footer .phone-icon a {
@@ -1866,4 +1866,7 @@ temp for mdal*/
 /* end
 temp for mdal*/
 /* START global for all pages media query*/
+.img-fluid {
+	height: 230px; /* temp for gallery, need*/
+}
 /* END global for all pages media query*/
