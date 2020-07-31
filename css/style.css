@@ -2090,7 +2090,8 @@ temp for mdal*/
 /* end
 temp for mdal*/
 /* START global for all pages media query*/
-.img-fluid {
+.section-main-gallery .img-fluid,
+.main-photo-block .img-fluid {
 	height: 230px; /* temp for gallery, need edit*/
 }
 /* END global for all pages media query*/
