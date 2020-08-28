@@ -14,7 +14,7 @@
 		<title>Nuestro Tango School</title>
 		<meta name="description" content="Перша і єдина школа аргентинського танго в Ірпені">
 		<meta property="og:url" content="https://nuestrotango.com/">
-		<meta property="og:title" content="Nuestro Tango School">		
+		<meta property="og:title" content="Nuestro Tango School">
 		<meta property="og:description" content="Перша і єдина школа аргентинського танго в Ірпені">
 		<meta property="og:image" content="https://nuestrotango.com/img/greeting_mob_version1.jpg">
 		<meta property="og:image:alt" content="greeting" >
@@ -167,7 +167,7 @@
 										</div>
 										<div class="intermediate-course__item course__item">
 											<div class="intermediate-course__title group-title">Вартість абонемента</div>
-											<div class="intermediate-course__text course__text-bold">1 000 <span>грн.</span></div>
+											<div class="intermediate-course__text course__text-bold">1 000 <span>грн. </span>/ 6 <span>уроків</span></div>
 										</div>
 										<div class="intermediate-course__item course__item">
 											<div class="intermediate-course__title group-title">Курс для тебе, якщо ти:</div>
@@ -404,7 +404,7 @@
 									</div>
 									<div class="course__item intermediate-course__item">
 										<div class="intermediate-course__title group-title">Вартість абонемента</div>
-										<div class="intermediate-course__text course__text-bold">1 000 <span>грн.</span></div>
+										<div class="intermediate-course__text course__text-bold">1 000 <span>грн.</span> / 6 <span>уроків</span></div>
 									</div>
 									<div class="events__registration">
 										<a target="_blank" href="https://forms.gle/Z6uRJLE9Xb5UpEX88" class="btn-yellow__white">Зареєструватися <i class="fa fa-plus"></i></a>
@@ -620,14 +620,14 @@
 									<div class="course__item private-course__item">
 										<div class="schedule-table">
 											<div class="schedule-table__row">
-												<div class="schedule__item-day schedule__item">соло</div>
+												<div class="schedule__item-day schedule__item">1 урок</div>
 												<div class="schedule__item-hours schedule__item">60 хв.</div>
-												<div class="schedule__item-price schedule__item">700 грн.</div>
+												<div class="schedule__item-price schedule__item">1 000 грн.</div>
 											</div>
 											<div class="schedule-table__row">
-												<div class="schedule__item-day schedule__item">в парі</div>
-												<div class="schedule__item-hours schedule__item">80 хв.</div>
-												<div class="schedule__item-price schedule__item">900 грн.</div>
+												<div class="schedule__item-day schedule__item">сет з 4 уроків</div>
+												<div class="schedule__item-hours schedule__item">60 хв.</div>
+												<div class="schedule__item-price schedule__item">3 600 грн.</div>
 											</div>
 										</div>
 									</div>
@@ -659,29 +659,26 @@
 							</div>
 							<div class="footer-right position-relative">
 								<div class="footer-form__wrapper">
-									<form>
-										<!-- Hidden Fields -->
-										<input type="hidden" name="project_name" value="Nuestrotango">
-										<input type="hidden" name="admin_email" value="admin@nuestrotango.com">
-										<input type="hidden" name="form_subject" value="Nuestrotango form">
-										<!-- END Hidden Fields -->
+									<form class="form-at">
 										<h5 class="form-title position-relative d-flex align-items-center">Напиши нам </h5>
-										<div class="md-form">
-											<input name="Имя" type="text" class="form-input" placeholder="Ім'я" required disabled>
+										<div class="md-form validate-input-at" data-validate="Обов'язкове поле">
+											<input name="name-at" type="text" class="form-input input-at" placeholder="Ім'я">
 										</div>
-										<div class="md-form">
-											<input name="e-mail" type="email" class="form-input" placeholder="e-mail" required disabled>
+										<div class="md-form validate-input-at" data-validate="Обов'язкове поле">
+											<input name="email-at" type="email" class="form-input input-at" placeholder="e-mail">
 										</div>
-										<div class="md-form">
-											<input name="Телефон" type="phone" class="form-input" placeholder="Телефон" required disabled>
+										<div class="md-form validate-input-at" data-validate="Обов'язкове поле">
+											<input name="phone-at" type="phone" class="form-input input-at" placeholder="Телефон">
 										</div>
-										<div class="md-form">
-											<textarea name="Повідомлення" type="text" class="form-input md-textarea" rows="3" placeholder="Повідомлення" required disabled></textarea>
+										<div class="md-form validate-input-at" data-validate="Обов'язкове поле">
+											<textarea name="message-at" type="text" class="form-input input-at md-textarea" rows="3" placeholder="Повідомлення"></textarea>
 										</div>
 										<div class="md-form send-button">
-											<input type="submit" value="Відправити" disabled>
+											<input type="hidden" name="subject-at" value="форма зворотнього зв'язку">
+											<input type="submit" value="Відправити" id="submit-at" class="form-at-btn">
 										</div>
 									</form>
+									<div class="result-at"></div>
 								</div>
 							</div>
 						</footer>
