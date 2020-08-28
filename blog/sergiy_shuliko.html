@@ -128,29 +128,26 @@
 			</div>
 			<div class="footer-right position-relative">
 				<div class="footer-form__wrapper">
-					<form>
-						<!-- Hidden Fields -->
-						<input type="hidden" name="project_name" value="Nuestrotango">
-						<input type="hidden" name="admin_email" value="admin@nuestrotango.com">
-						<input type="hidden" name="form_subject" value="Nuestrotango form">
-						<!-- END Hidden Fields -->
+					<form class="form-at">
 						<h5 class="form-title position-relative d-flex align-items-center">Напиши нам </h5>
-						<div class="md-form">
-							<input name="Имя" type="text" class="form-input" placeholder="Ім'я" required disabled>
+						<div class="md-form validate-input-at" data-validate="Обов'язкове поле">
+							<input name="name-at" type="text" class="form-input input-at" placeholder="Ім'я">
 						</div>
-						<div class="md-form">
-							<input name="e-mail" type="email" class="form-input" placeholder="e-mail" required disabled>
+						<div class="md-form validate-input-at" data-validate="Обов'язкове поле">
+							<input name="email-at" type="email" class="form-input input-at" placeholder="e-mail">
 						</div>
-						<div class="md-form">
-							<input name="Телефон" type="phone" class="form-input" placeholder="Телефон" required disabled>
+						<div class="md-form validate-input-at" data-validate="Обов'язкове поле">
+							<input name="phone-at" type="phone" class="form-input input-at" placeholder="Телефон">
 						</div>
-						<div class="md-form">
-							<textarea name="Повідомлення" type="text" class="form-input md-textarea" rows="3" placeholder="Повідомлення" required disabled></textarea>
+						<div class="md-form validate-input-at" data-validate="Обов'язкове поле">
+							<textarea name="message-at" type="text" class="form-input input-at md-textarea" rows="3" placeholder="Повідомлення"></textarea>
 						</div>
 						<div class="md-form send-button">
-							<input type="submit" value="Відправити" disabled>
+							<input type="hidden" name="subject-at" value="форма зворотнього зв'язку">
+							<input type="submit" value="Відправити" id="submit-at" class="form-at-btn">
 						</div>
 					</form>
+					<div class="result-at"></div>
 				</div>
 			</div>
 		</footer>
