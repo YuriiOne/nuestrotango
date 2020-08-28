@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
 	font-family: CenturyGothic-Bold;
 	src: url(../fonts/gothic.ttf);
@@ -992,7 +999,8 @@ img.zoom {
 .event-item:first-child {
 	-ms-flex-preferred-size: 120px;
 	    flex-basis: 120px;
-	min-width: 120px;
+	min-width: 180px;
+	/*min-width: 120px;*/
 }
 .event-item{
 	padding: 18px 25px;
@@ -1785,13 +1793,13 @@ end study before video
 
 .section-blog .photo-and-text .blog__read-more {
 	font-size: 14px;
-	line-height: 17px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+    line-height: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 .section-blog .photo-and-text .blog__read-more a {
 	-webkit-text-decoration-line: underline;
@@ -1960,22 +1968,19 @@ footer .send-button {
 	border-bottom: 1px solid #E3545A;
 }
 
-.md-form input::-webkit-input-placeholder {
+.md-form textarea::-webkit-input-placeholder, .md-form input::-webkit-input-placeholder {
 	color: #A4ADC4;
 }
-
-.md-form input::-moz-placeholder {
+.md-form textarea::-moz-placeholder, .md-form input::-moz-placeholder {
 	color: #A4ADC4;
 }
-
-.md-form input:-ms-input-placeholder {
+.md-form textarea:-ms-input-placeholder, .md-form input:-ms-input-placeholder {
 	color: #A4ADC4;
 }
-
-.md-form input::-ms-input-placeholder {
+.md-form textarea::-ms-input-placeholder, .md-form input::-ms-input-placeholder {
 	color: #A4ADC4;
 }
-
+.md-form textarea::placeholder,
 .md-form input::placeholder {
 	color: #A4ADC4;
 }
@@ -2016,6 +2021,91 @@ footer .send-button {
     padding: 13px 27px;
     font-weight: bold;
  }
+ /*start test*/
+.alert-validate::before {
+	content: attr(data-validate);
+	position: absolute;
+	max-width: 70%;
+	background-color: #fff;
+	border: 1px solid #c80000;
+	border-radius: 2px;
+	padding: 4px 25px 4px 10px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	right: 12px;
+	pointer-events: none;
+	color: #c80000;
+	font-size: 13px;
+	line-height: 1.4;
+	text-align: left;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.4s;
+	-o-transition: opacity 0.4s;
+	transition: opacity 0.4s;
+}
+.alert-validate::after {
+	content: "\f129";
+	font-family: "FontAwesome";
+	display: block;
+	position: absolute;
+	color: #c80000;
+	font-size: 18px;
+	font-weight: bold;	
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	right: 22px;
+}
+.alert-validate:hover:before {
+	visibility: visible;
+	opacity: 1;
+}
+.error-at {
+	color: red;
+	padding: 10px 0;
+}
+.success-at {
+	color: #333;
+	font-size: 24px;
+    font-weight: bold;
+	text-align: center;
+}
+/*****  for user agreement code
+.form-at input[type=checkbox] {
+    display:none;
+}
+.form-at input[type=checkbox] + label {
+    display: block;
+    position: relative;
+    margin: 0 0 20px 34px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #333333;
+}
+.form-at input[type=checkbox] + label:before {
+	box-sizing: border-box;
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 26px;
+    line-height: 22px;
+    left: -34px;
+	border: 2px solid #BFE2FF;
+	border-radius: 2px;
+}
+.form-at input[type=checkbox]:checked + label:before{
+    content: '\2714';
+    color:#337AB7;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+	border: 2px solid #337AB7;
+}
+************/
 /*temp footer-copyright*/
 .footer-copyright {
 	color: #646464;
