@@ -750,7 +750,7 @@ h1 {
 	top: 20px;
 	right: 20px;
 	color: grey;
-	font-size: 22px;
+	font-size: 30px;
 	cursor: pointer;
 }
 .close-modal-window__btn:hover{ /*temp */
@@ -2185,3 +2185,7 @@ temp for mdal*/
 	height: 230px; /* temp for gallery, need edit*/
 }
 /* END global for all pages media query*/
+/* fancybox modification*/
+#main-page .fancybox-inner{
+	margin: 10px;
+}
