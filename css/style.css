@@ -78,7 +78,7 @@ section {
 }
 @media (max-width: 767px) {
 	#about-page section{
-		padding: 50px 0;
+		padding: 50px 0 0 0;
 	}
 	
 }
@@ -711,6 +711,7 @@ h1 {
 /* END schedule for all 3 modal */
 .course__item .teacher-block{
 	padding: 0 15px;
+	flex-basis: 50%; /*19*/
 }
 .basic-course.modal-student-group .flip-card img{
 	border: 2px solid #E3545A;
@@ -1101,7 +1102,7 @@ a.registration-expired {
 	color: #434A5B;
 }
 .section-teachers{
-	padding-bottom: 150px;
+	padding: 50px 0 150px ;
 }
 
 .block-idea{
@@ -1173,11 +1174,12 @@ a.registration-expired {
 	margin-bottom: 160px;
 	padding: 0 35px;
 }
+/* task_19
 .section-teachers .teacher-block.teacher-nuestrotango{
 	-ms-flex-preferred-size: 50%;
 	    flex-basis: 50%;
 }
-
+*/
 .block-whoWeAre .teacher-block {
 	text-align: center;
 }
@@ -1197,7 +1199,7 @@ a.registration-expired {
 	height: 160px;
 	border-radius: 50%;
 }
-
+/* tas_19 flip card
 .flip-card-inner {
 	position: relative;
 	width: 100%;
@@ -1224,14 +1226,14 @@ a.registration-expired {
 	-webkit-backface-visibility: hidden;
 	        backface-visibility: hidden;
 }
-
+*/
 /******END section-about-us ******/
 
 /******Start page Study ******/
 
 /*Start section video*/
 .section-video {
-	background: url(../img/video-mask.png) no-repeat;
+	background: url(../img/video-mask_BW.png) no-repeat;
 	/*height: 600px;*/
 	color: #fff;
 		background-size: cover;
@@ -1740,6 +1742,9 @@ end study before video
 /******END page Study ******/
 
 /**********START BloG ***************/
+.title-block .header-title h1{ /*check*/
+	margin: 0;
+}
 #blog-page {
 	background: #FFF;
 }
@@ -1790,7 +1795,9 @@ end study before video
 	line-height: 17px;
 	color: #434A5B;
 }
-
+.section-blog .blog__item span.small-description {
+    display: block;
+}
 .section-blog .photo-and-text .blog__read-more {
 	font-size: 14px;
     line-height: 17px;
