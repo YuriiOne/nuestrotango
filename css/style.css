@@ -284,7 +284,7 @@ a.btn-yellow__white {
 /*header*/
 
 .section-main-header {
-	background-image: url(../img/header_main_page_mobile_bg_normal.jpg);
+	background-image: url(../img/main-3.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 83% center;
@@ -712,6 +712,9 @@ h1 {
 .course__item .teacher-block{
 	padding: 0 15px;
 	flex-basis: 50%; /*19*/
+}
+.course__item .teacher-block.pd-0{
+	padding: 0;
 }
 .basic-course.modal-student-group .flip-card img{
 	border: 2px solid #E3545A;
